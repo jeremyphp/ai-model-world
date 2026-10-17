@@ -20,6 +20,7 @@ export interface Dict {
     chronicle: string;
     leaderboard: string;
     compare: string;
+    changelog: string;
   };
 
   continent: {
@@ -197,6 +198,7 @@ const zh: Dict = {
     chronicle: '时间线',
     leaderboard: '排行榜',
     compare: '对比',
+    changelog: '更新',
   },
 
   continent: {

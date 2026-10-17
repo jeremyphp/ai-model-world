@@ -3,6 +3,7 @@ import { GroundBackdrop } from '@/components/world/Ground';
 import { SiteHeader } from '@/components/world/SiteHeader';
 import { LeaderboardExplorer } from '@/components/leaderboard/LeaderboardExplorer';
 import { serializeExplorer } from '@/components/leaderboard/serialize';
+import { AffiliateStrip } from '@/components/world/AffiliateStrip';
 import { loadSnapshot } from '@/lib/snapshot';
 import { buildTrackIndex } from '@/lib/scores';
 import { DEFAULT_LANG } from '@/lib/i18n';
@@ -54,6 +55,8 @@ export default function LeaderboardPage() {
             分数来自 Epoch AI（CC-BY 4.0）、LiveBench（Apache-2.0）与 LMArena 官方数据集（CC-BY 4.0），
             每 12 小时同步一次。本站不使用 Artificial Analysis 的数据，它禁止再分发。
           </p>
+
+          <AffiliateStrip />
         </div>
       </div>
     </main>

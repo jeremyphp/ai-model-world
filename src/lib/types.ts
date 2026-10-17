@@ -260,3 +260,20 @@ export interface WorldSnapshot {
    */
   benchmarks?: BenchmarkMeta[];
 }
+
+/**
+ * 变更日志条目：sync 后比较新旧快照得出，存于 data/changelog.json。
+ * 由 scripts/sync/lib/changelog.ts 生成，站点 /changelog/ 与 RSS 消费，
+ * 速报 issue 也读同一份——三处永远一致。
+ */
+export interface ChangeEntry {
+  /** 快照生成时刻（ISO），同时充当条目 id，重复的快照不会写两条 */
+  date: string;
+  /** 供 GitHub issue / RSS 使用的预排版摘要（markdown） */
+  summary: string;
+  newModels: { id: string; name: string; slug: string; vendorZh: string }[];
+  retired: { id: string; name: string; slug: string; vendorZh: string }[];
+  newVendors: { id: string; nameZh: string }[];
+  flagships: { vendorId: string; vendorZh: string; before: string; after: string; slug: string }[];
+  champions: { key: string; label: string; before: string; after: string; slug: string }[];
+}

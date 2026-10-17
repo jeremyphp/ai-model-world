@@ -11,6 +11,11 @@
 
 const IS_TOY = (process.env.NEXT_PUBLIC_BASE_PATH ?? '').startsWith('/toy/');
 
+/** 是否在为 B 站 Toy 构建。Toy 的机审对站外链接很敏感，广告位也要整块隐藏。 */
+export function isToyBuild(): boolean {
+  return IS_TOY;
+}
+
 const BLOCKED_HOST =
   /(^|\.)(huggingface\.co|google|google\.com|youtube\.com|kaggle\.com|x\.com|x\.ai|twitter\.com|openai\.com|chatgpt\.com|anthropic\.com|claude\.ai|perplexity\.ai|meta\.ai|meta\.com|facebook\.com|reddit\.com|medium\.com|substack\.com|discord\.gg|linux\.do|moegirl\.org\.cn|gov\.sa)$/i;
 

@@ -51,6 +51,7 @@ import {
   pickCodingLeague,
 } from './sources/models-dev';
 import { validateSnapshot } from './validate';
+import { diffSnapshots } from './lib/changelog';
 import type { BenchmarkScore, ModelRecord, WorldSnapshot } from '../../src/lib/types';
 
 let passed = 0;
@@ -1222,6 +1223,54 @@ check(
   ]).length,
   1,
 );
+
+// ── 变更日志 ──────────────────────────────────────────────────────────
+// diffSnapshots 是「更新引擎」的核心：sync 前后各拍一张快照，差集就是速报内容。
+// 与首页用同一套 buildPlazaRoster / buildChampions，这里只验「变了会被看见」。
+const changelogBase = snapshot([model()]);
+const changelogVendor = (id: string, nameZh: string, continent: 'east' | 'west' = 'west') => ({
+  id,
+  name: id,
+  nameZh,
+  country: 'US',
+  continent,
+  motif: 'wanderer',
+  accentColor: '#000000',
+  homepage: null,
+});
+const changelogOld = {
+  ...changelogBase,
+  vendors: [changelogVendor('a', '厂商甲'), changelogVendor('b', '厂商乙')],
+  models: [
+    model({ id: 'a/m1', slug: 'a-m1', name: 'M1', vendorId: 'a', benchmarks: { ...model().benchmarks, eci: 100 } }),
+    model({ id: 'a/m2', slug: 'a-m2', name: 'M2', vendorId: 'a' }),
+    model({ id: 'b/m3', slug: 'b-m3', name: 'M3', vendorId: 'b', releaseDate: '2026-01-05' }),
+  ],
+};
+const changelogNew = {
+  ...changelogBase,
+  generatedAt: '2026-01-06T00:00:00.000Z',
+  vendors: [changelogVendor('a', '厂商甲'), changelogVendor('b', '厂商乙'), changelogVendor('c', '厂商丙')],
+  models: [
+    model({ id: 'a/m1', slug: 'a-m1', name: 'M1', vendorId: 'a', benchmarks: { ...model().benchmarks, eci: 100 } }),
+    model({ id: 'a/m2', slug: 'a-m2', name: 'M2', vendorId: 'a', retiredAt: '2026-01-06' }),
+    model({ id: 'b/m3', slug: 'b-m3', name: 'M3', vendorId: 'b', releaseDate: '2026-01-05' }),
+    model({
+      id: 'b/m4',
+      slug: 'b-m4',
+      name: 'M4',
+      vendorId: 'b',
+      releaseDate: '2026-01-06',
+      benchmarks: { ...model().benchmarks, eci: 120 },
+    }),
+    model({ id: 'c/m5', slug: 'c-m5', name: 'M5', vendorId: 'c' }),
+  ],
+};
+const changelogDiff = diffSnapshots(changelogOld, changelogNew);
+check('变更日志：新模型被看见', changelogDiff?.newModels.map((m) => m.id), ['b/m4', 'c/m5']);
+check('变更日志：退役被看见', changelogDiff?.retired.map((m) => m.id), ['a/m2']);
+check('变更日志：新厂商被看见', changelogDiff?.newVendors.map((v) => v.id), ['c']);
+check('变更日志：没有变化时返回 null', diffSnapshots(changelogOld, changelogOld), null);
 
 // ── 汇总 ──────────────────────────────────────────────────────────────
 console.log(`\n自检完成：${passed} 项通过，${failures.length} 项失败`);

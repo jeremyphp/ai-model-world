@@ -53,10 +53,21 @@ jobs:
           key: sync-http-cache-${{ github.run_id }}
           restore-keys: sync-http-cache-
 
+      # 变更日志的旧快照必须在 sync 覆盖 models.json 之前留下，
+      # 否则「本次变了什么」就没有参照物了。
+      - name: 备份旧快照
+        run: cp data/models.json /tmp/models.old.json
+
       # 管线内建合理性闸门：模型总数骤降、必填字段覆盖率下滑、定价为零或负
       # 都会拒绝写入并以非零退出码结束，此时旧快照原封不动地保留。
       - name: 抓取并归一化
         run: npm run sync
+
+      # 比较新旧快照，产出 data/changelog.json 条目（新模型/退役/门面换代/冠军易主）。
+      # 有变化时写 GITHUB_OUTPUT 的 changed=true，供下面的速报步骤开 issue。
+      - name: 生成变更日志
+        id: changelog
+        run: npx tsx scripts/sync/changelog.ts /tmp/models.old.json data/models.json
 
       - name: 提交快照
         run: |
@@ -93,6 +104,57 @@ jobs:
             data/discovery-pending.json
           if-no-files-found: ignore
           retention-days: 30
+
+      # 「更新引擎」的用户可订阅面：有值得一提的变化时，往「模型更新速报」issue 追加一条。
+      # 关心的人 watch 这个仓库或这条 issue 就能第一时间收到（GitHub 会发通知/邮件），
+      # 不依赖任何后端。连续变化不会刷出一堆 issue，永远只有一条。
+      - name: 模型更新速报
+        if: steps.changelog.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const title = '模型更新速报';
+            const changelog = JSON.parse(fs.readFileSync('data/changelog.json', 'utf8'));
+            const entry = changelog[0];
+            const body = [
+              `### ${entry.date}`,
+              '',
+              entry.summary,
+              '',
+              `完整记录见站内 /changelog/ 与 RSS；数据快照已随本次同步提交。`,
+            ].join('\n');
+
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find((i) => i.title === title && !i.pull_request);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+              core.info(`已在 issue #${existing.number} 追加评论`);
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body: [
+                  '模型世界的自动更新速报。数据管线（`.github/workflows/sync.yml`）每 12 小时同步一次，',
+                  '有新模型、门面换代或冠军易主时都会往这里追加一条评论。',
+                  '**订阅方式**：Watch 本仓库（右上角 Watch → All Activity），或在站内订阅 RSS。',
+                  '',
+                  body,
+                ].join('\n'),
+              });
+              core.info(`已新建 issue「${title}」`);
+            }
 
       # 「零维护」承诺失效时必须留下一条看得见的痕迹。
       # 找标题为「数据同步失败」且仍 open 的 issue：有就追加评论，没有就新建——

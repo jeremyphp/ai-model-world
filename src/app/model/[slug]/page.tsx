@@ -34,6 +34,7 @@ import { buildLineage } from "@/lib/lineage";
 import { loadVideoLibrary } from "@/lib/video-library";
 import { videosFor } from "@/lib/videos";
 import { ScoreLedger } from "@/components/leaderboard/ScoreLedger";
+import { AffiliateStrip } from "@/components/world/AffiliateStrip";
 import { buildAptitudeScale } from "@/lib/aptitude";
 import { buildPersonaContext, contextAnchor, personaFor } from "@/lib/persona";
 import { attributionFor, loadAttribution } from "@/lib/attribution";
@@ -477,6 +478,8 @@ export default async function ModelRoomPage({
           keyword={videoLibrary.keyword}
           authorMid={videoLibrary.authorMid}
         />
+
+        <AffiliateStrip />
       </div>
     </main>
   );
