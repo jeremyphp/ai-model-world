@@ -27,18 +27,19 @@
   /*
    * 天空。世界的时刻固定在黎明：西边夜色未退，东边朝阳已升。
    *
-   * 第二版配色。第一版整站是紫罗兰调（#2a2148 / #5b3f7a），加上粉红的「国内」色，
-   * 长时间看眼睛发紧——紫色饱和度高、明度低，又铺满整屏，是最容易看累的组合。
-   * 这一版把底色统一到**低饱和的深蓝灰**（夜空、石板、屋墙全是同一族色），
-   * 只让金色标题、厂商色屋顶和四条能力条带颜色。暗色 UI 的通行做法：
-   * 背景退后，信息前进。
+   * 第三版配色（王者荣耀英雄风）：底色统一到更深的靛蓝夜空，
+   * 金色压暗一档做旧金，让披风铠甲上的金边亮出来。
+   * 只让金色标题、厂商色屋顶和四条能力条带颜色。背景退后，信息前进。
    */
-  --color-void: #0d1017;
-  --color-dusk: #1a1f2b;
-  --color-twilight: #3b4b6b;
+  --color-void: #0a0d1a;
+  --color-dusk: #141a30;
+  --color-twilight: #2c3a5e;
   --color-ember: #b96a4a;
   --color-dawn: #e9a663;
   --color-gold: #f2cf6a;
+  /* 王者荣耀 UI 的旧金 / 深金，用于包边与描线 */
+  --color-gold-dim: #c9a24a;
+  --color-gold-dark: #8a6a1f;
 
   /* 界面 */
   --color-ink: #10141c;
@@ -56,19 +57,19 @@
   --color-grass-dark: #34573f;
   --color-stone: #5f6878;
   --color-stone-dark: #3a4150;
-  --color-ground: #202634;
+  --color-ground: #131828;
 
   /*
    * 屋子。墙面按房龄分五档，都是同一族的蓝灰，只在明度上拉开；
    * 地板与名牌比墙面再深一档，做出「剖面」的层次。
    */
-  --color-wall-new: #2f3a52;
-  --color-wall-young: #2c364c;
-  --color-wall-mid: #293245;
-  --color-wall-old: #252d3e;
-  --color-wall-ghost: #212836;
-  --color-floor: #181d28;
-  --color-plate: #151a24;
+  --color-wall-new: #2c3a5c;
+  --color-wall-young: #293651;
+  --color-wall-mid: #253047;
+  --color-wall-old: #212a3e;
+  --color-wall-ghost: #1c2436;
+  --color-floor: #141a2c;
+  --color-plate: #10141f;
 
   /* 状态 */
   --color-crown: #f2cf6a;
@@ -252,6 +253,8 @@
     box-shadow:
       inset -3px -3px 0 0 rgb(0 0 0 / 0.4),
       inset 3px 3px 0 0 rgb(255 255 255 / 0.12),
+      /* 王者荣耀风：面板内侧一道旧金描线 */
+      inset 0 0 0 1px rgb(201 162 74 / 0.55),
       4px 4px 0 0 rgb(0 0 0 / 0.45);
   }
 
@@ -276,6 +279,7 @@
     box-shadow:
       inset -3px -3px 0 0 var(--color-parchment-dim),
       inset 3px 3px 0 0 var(--color-parchment-lit),
+      inset 0 0 0 1px rgb(138 106 31 / 0.6),
       3px 3px 0 0 rgb(0 0 0 / 0.35);
     transition: none;
   }

@@ -108,9 +108,13 @@ export function ChampionRow({
 
                 {/* 角色与领奖台 */}
                 <div className="relative flex h-[68px] w-full items-end justify-center">
+                  {/* 王者荣耀风的金色领奖台：下金上暗的台座 + 顶部高光 */}
                   <div
-                    className="absolute bottom-0 h-1.5 w-[70%]"
-                    style={{ background: accent, opacity: 0.55 }}
+                    className="absolute bottom-0 h-2 w-[70%]"
+                    style={{
+                      background: 'linear-gradient(180deg, var(--color-gold) 0 2px, var(--color-gold-dark) 2px 60%, rgb(0 0 0 / 0.5) 60%)',
+                      boxShadow: '0 0 10px -2px var(--color-gold)',
+                    }}
                     aria-hidden
                   />
                   <Figure

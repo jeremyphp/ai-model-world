@@ -28,7 +28,7 @@ import { CELL, COLUMNS, OUT_H, OUT_ROW, OUT_W, renderSheet, ROWS, type ChibiFlag
 import { mockSnapshot } from './mock-models.ts';
 
 /** Bump when a drawing change should invalidate cached sheets. */
-const PIPELINE_VERSION = '2.0.0';
+const PIPELINE_VERSION = '3.0.0';
 
 const ROOT = path.resolve(__dirname, '../..');
 const SNAPSHOT_FILE = path.join(ROOT, 'data/models.json');

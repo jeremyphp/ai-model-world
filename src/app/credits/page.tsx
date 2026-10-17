@@ -43,7 +43,8 @@ export default function CreditsPage() {
           <section className="pixel-panel-dark mb-6 p-4">
             <h2 className="mb-2 font-pixel text-[14px] text-[var(--color-gold)]">角色形象</h2>
             <p className="mb-2 text-[13px] leading-relaxed text-[var(--color-parchment)]">
-              全部角色都是本站手绘的原创像素画。没有公认娘化形象的厂商，按它的标志与品牌色设计；
+              全部角色都是本站手绘的原创像素画，披风、铠甲与武器同样为本项目原创绘制。
+              没有公认娘化形象的厂商，按它的标志与品牌色设计；
               发饰上的标志是像素化的改写，只用于辨认，商标归各自所有者。下面这些形象借用了已有的设定：
             </p>
             <ul className="space-y-1 text-[13px] leading-relaxed text-[var(--color-parchment)]">

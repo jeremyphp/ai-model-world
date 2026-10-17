@@ -213,7 +213,7 @@ export function AllModelsTable({ data }: { data: AllTableData }) {
                   </td>
                   <td className="whitespace-nowrap px-1.5 py-1.5 text-right tabular-nums sm:px-2">
                     {r.eci != null ? (
-                      <span title={`Epoch Capabilities Index ${r.eci.toFixed(1)}，全球第 ${r.eciRank} 名`}>
+                      <span title={`Epoch Capabilities Index ${r.eci.toFixed(1)}，峡谷第 ${r.eciRank} 名`}>
                         <span className="text-[var(--color-parchment)]">{r.eci.toFixed(1)}</span>
                         <span className="font-pixel ml-1.5 hidden text-[12px] text-[var(--color-gold)] sm:inline">
                           #{r.eciRank}

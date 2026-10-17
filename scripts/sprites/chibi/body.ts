@@ -21,10 +21,92 @@ export type SleeveStyle = 'long' | 'puff';
 
 export const legs = (shoeStyle: 'shoe' | 'boot' = 'shoe'): Layer[] => [
   { x: 27, y: 50, mats: ['legs'], rows: Array(4).fill('lmd....lmd') },
+  // 鞋口一圈金边：王者荣耀英雄风的铠甲靴
   shoeStyle === 'boot'
-    ? { x: 26, y: 51, mats: ['shoe'], rows: ['.lmm....lmm.', '.lmm....lmm.', '.mmm....mmm.', 'lmmmm..lmmmm', 'mmmmm..mmmmm', '.ddd....ddd.'] }
-    : { x: 26, y: 54, mats: ['shoe'], rows: ['.lmm....lmm.', 'lmmmm..lmmmm', '.ddd....ddd.'] },
+    ? {
+        x: 26,
+        y: 51,
+        mats: ['shoe', 'gold'],
+        rows: ['.MMM....MMM.', '.lmm....lmm.', '.mmm....mmm.', 'lmmmm..lmmmm', 'mmmmm..mmmmm', '.ddd....ddd.'],
+      }
+    : { x: 26, y: 54, mats: ['shoe', 'gold'], rows: ['.MMM....MMM.', 'lmmmm..lmmmm', '.ddd....ddd.'] },
 ];
+
+/** 脚下的金色光环。半透明金色椭圆，让角色像王者荣耀英雄一样踩着光。 */
+export function aura(): Layer {
+  const legend: Record<string, Slot> = {
+    a: { rgba: hex('#f5d76e', 96) },
+    b: { rgba: hex('#f5d76e', 58) },
+    c: { rgba: hex('#f5d76e', 30) },
+  };
+  const rows: string[] = [];
+  for (let y = 50; y <= 58; y++) {
+    let row = '';
+    for (let x = 12; x <= 51; x++) {
+      const dx = (x - 31.5) / 16;
+      const dy = (y - 54.2) / 3.3;
+      const d = dx * dx + dy * dy;
+      row += d <= 1 ? (d <= 0.4 ? 'a' : d <= 0.7 ? 'b' : 'c') : '.';
+    }
+    rows.push(row);
+  }
+  return { x: 12, y: 50, rows, legend, outline: false };
+}
+
+/**
+ * 披风：从肩头垂下、下摆逐渐展开，衣料色 + 金边收口。
+ * 画在身体与头发之后、一切之前，所以它永远在角色身后。
+ */
+export function cape(): Layer {
+  const rows = [
+    '..............mmmmmmmmmm..............',
+    '.............lmmmmmmmmmmd.............',
+    '............lmmmmmmmmmmmmd............',
+    '...........lmmmmmmmmmmmmmmd...........',
+    '..........lmmmmmmmmmmmmmmmmd..........',
+    '.........lmmmmmmmmmmmmmmmmmmd.........',
+    '........lmmmmmmmmmmmmmmmmmmmmd........',
+    '.......lmmmmmmmmmmmmmmmmmmmmmmd.......',
+    '......lmmmmmmmmmmmmmmmmmmmmmmmmd......',
+    '.....lmmmmmmmmmmmmmmmmmmmmmmmmmmd.....',
+    '....lmmmmmmmmmmmmmmmmmmmmmmmmmmmmd....',
+    '...lmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd...',
+    '..lmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd..',
+    '.lmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd.',
+    'lmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd',
+    'LMMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmMMMMD',
+  ];
+  return { x: 13, y: 36, rows, mats: ['cloth', 'gold'] };
+}
+
+/** 肩甲：一对包金边的护肩，压在袖子上沿。 */
+export function pauldrons(): Layer[] {
+  const rows = [
+    '....mmmm..',
+    '...lmmmmM.',
+    '..lmmmmMMd',
+    '.lmmmmmMMd',
+    '.lmmmmmMMd',
+    '.lmmmmMMMd',
+    '.lmmmmMMMd',
+    '..lmmmmmMd',
+    '...dddddD.',
+  ];
+  return [
+    { x: 17, y: 35, rows, mats: ['cloth', 'gold'] },
+    { x: 37, y: 35, rows, mats: ['cloth', 'gold'], flip: true },
+  ];
+}
+
+/** 金腰带：一圈金带 + 深色扣带，系在裙/裤腰上。 */
+export function belt(): Layer {
+  return {
+    x: 22,
+    y: 44,
+    mats: ['gold'],
+    rows: ['lmmmmmmmmmmmmmmmmmmd', 'lmmddddddddddddddmmd'],
+  };
+}
 
 export const neck: Layer = { x: 30, y: 35, mats: ['skin'], rows: ['dddd', 'mmmm', 'mmmm'] };
 

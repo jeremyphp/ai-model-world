@@ -22,6 +22,7 @@ import { hashInt } from '../hash.ts';
 import type { OutfitStyle, SleeveStyle } from './body.ts';
 import type { EarStyle, Extra, LogoId, OrnamentSide, TailStyle } from './extras.ts';
 import type { HairOptions } from './hair.ts';
+import type { WeaponId } from './weapons.ts';
 
 /** A flat colour, or a vertical gradient as [canvas y, colour] stops. */
 export type Paint = string | readonly (readonly [number, string])[];
@@ -48,11 +49,79 @@ export interface Design {
   legs?: string;
   shoe?: string;
   boots?: boolean;
+  /** 王者荣耀英雄风的武器。未指定时按 WEAPONS 表 / 哈希兜底。 */
+  weapon?: WeaponId;
+  /** 武器主体色，默认钢色。NVIDIA 用荧光绿光刃。 */
+  weaponColor?: string;
+  /** 左手持武：尾巴占右侧的设定（DeepSeek 鲸尾、智谱狐尾）用左手。 */
+  weaponSide?: 'left' | 'right';
   logo?: { id: LogoId; side: OrnamentSide; colors: Record<string, Paint> };
   letter?: { char: string; side: OrnamentSide; badge: string; ink: string };
   ears?: { style: EarStyle; color: string; inner: string };
   tail?: { style: TailStyle; color: string; tip: string };
   extras?: { kind: Extra; colors: Record<string, string> }[];
+}
+
+/**
+ * 武器分配：每位英雄一把看家武器。
+ * 右撇子武器（剑/法杖/枪……）拿在右手；盾、法典拿在左手，与画笔共存。
+ * 表里没有的走哈希兜底，未收录厂商也永远有武器。
+ */
+const WEAPONS: Record<string, WeaponId> = {
+  openai: 'staff',
+  'openai/image': 'staff',
+  anthropic: 'sword',
+  google: 'staff',
+  'google/gemma': 'staff',
+  deepseek: 'trident',
+  zhipuai: 'fan',
+  'bytedance-seed': 'spear',
+  alibaba: 'sword',
+  moonshotai: 'bow',
+  xai: 'gun',
+  meta: 'hammer',
+  mistral: 'sword',
+  nvidia: 'blade',
+  cohere: 'book',
+  microsoft: 'shield',
+  amazon: 'bow',
+  tencent: 'spear',
+  minimax: 'mic',
+  xiaomi: 'gun',
+  inclusionai: 'staff',
+  sakana: 'trident',
+  perplexity: 'book',
+  ibm: 'shield',
+  stepfun: 'spear',
+  baidu: 'hammer',
+  meituan: 'dagger',
+  upstage: 'staff',
+};
+
+/** 武器主体色覆盖：默认钢色，光刃类给荧光。 */
+const WEAPON_COLORS: Record<string, string> = {
+  nvidia: '#7dff9e',
+};
+
+/** 左手持武的设定：尾巴从右侧升起，右手边留给尾巴。 */
+const WEAPON_SIDES: Record<string, 'left'> = {
+  deepseek: 'left',
+  zhipuai: 'left',
+};
+
+const FALLBACK_WEAPONS: readonly WeaponId[] = ['sword', 'staff', 'spear', 'bow', 'fan', 'gun', 'trident', 'hammer', 'dagger', 'shield', 'book', 'mic', 'blade'];
+
+/** 给一个设定补上武器与武器色。设定自带武器优先。 */
+export function gearFor(d: Design, vendor: VendorLike): Design {
+  const key = d.key;
+  const weapon =
+    d.weapon ??
+    WEAPONS[key] ??
+    WEAPONS[vendor.id] ??
+    FALLBACK_WEAPONS[hashInt(`chibi:${vendor.id}`, 'weapon', FALLBACK_WEAPONS.length)];
+  const weaponColor = d.weaponColor ?? WEAPON_COLORS[key] ?? WEAPON_COLORS[vendor.id];
+  const weaponSide = d.weaponSide ?? WEAPON_SIDES[key] ?? WEAPON_SIDES[vendor.id];
+  return { ...d, weapon, weaponColor, weaponSide };
 }
 
 const RAINBOW: Paint = [
@@ -612,6 +681,6 @@ export function fallbackDesign(vendor: VendorLike): Design {
 }
 
 export function designFor(vendor: VendorLike, probe: VariantProbe): Design {
-  for (const v of VARIANTS) if (v.vendor === vendor.id && v.when(probe)) return DESIGNS[v.design];
-  return DESIGNS[vendor.id] ?? fallbackDesign(vendor);
+  for (const v of VARIANTS) if (v.vendor === vendor.id && v.when(probe)) return gearFor(DESIGNS[v.design], vendor);
+  return gearFor(DESIGNS[vendor.id] ?? fallbackDesign(vendor), vendor);
 }

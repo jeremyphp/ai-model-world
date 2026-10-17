@@ -70,6 +70,18 @@ export function SectionFrame({
         aria-hidden
       />
 
+      {/* 王者荣耀风的四枚金菱角饰：45° 旋转的小方框，只亮四个角点 */}
+      {['-left-[3px] -top-[3px]', '-right-[3px] -top-[3px]', '-bottom-[3px] -left-[3px]', '-bottom-[3px] -right-[3px]'].map(
+        (pos) => (
+          <span
+            key={pos}
+            className={`${corner} ${pos} rotate-45 border`}
+            style={{ borderColor: 'var(--color-gold-dim)', opacity: 0.9 }}
+            aria-hidden
+          />
+        ),
+      )}
+
       {children}
     </div>
   );

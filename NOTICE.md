@@ -7,7 +7,7 @@
 
 | 路径 | 内容 | 许可 |
 |---|---|---|
-| `assets/lpc/` · `public/sprites/` | 像素角色素材与合成产物 | CC0 / OGA-BY 3.0 |
+| `public/sprites/` | 像素角色素材与合成产物 | 本项目原创（MIT） |
 | `assets/fonts/` · `public/fonts/` | 中文像素字体及其子集 | SIL OFL 1.1 |
 | `data/` | 模型快照与榜单成绩 | 见第三节，逐源不同 |
 
@@ -15,19 +15,14 @@
 
 ## 一、像素素材
 
-角色由 [Universal LPC Spritesheet Character Generator](https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator)
-的分层素材程序化合成，上游锁定在 commit `6a437fcecefbc7b82b401ca319046f80d67cdd2b`。
-
-本项目**只 vendoring 了提供 CC0 或 OGA-BY 3.0 选项的资产**：269 个素材目录、
-1450 张 PNG，其中 OGA-BY 3.0 共 234 个、CC0 共 35 个。只提供 CC-BY-SA / GPL 的资产
-在 vendoring 阶段就被丢弃，因此本仓库**不承担任何 ShareAlike 或 GPL 的传染义务**，
-只承担署名义务。
+角色由本项目**逐像素手绘的原创字符画**程序化上色合成（`scripts/sprites/chibi/`），
+披风、铠甲与武器同样为原创绘制。早期版本曾使用
+[Universal LPC Spritesheet Character Generator](https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator)
+的分层素材（CC0 / OGA-BY 3.0），2026-09-26 起已整体替换为手绘形象，LPC 素材不再参与合成。
 
 上游生成器的**代码**是 GPL-3.0，本项目未使用其任何代码——`scripts/sprites/` 的合成器
-为自研，只消费上游的 JSON 元数据与 PNG 图像。
-
-逐资产的作者、采用许可与来源链接（269 行、35 位作者）在
-[`assets/lpc/CREDITS.md`](assets/lpc/CREDITS.md)，站内 `/credits/` 页面在构建期读取同一份文件渲染。
+为自研。借用了社区 / 官方娘化设定的形象，出处见站内 `/credits/` 页面。
+**未使用任何厂商的官方标识**——发饰上的标志是像素化的改写，只用于辨认，商标归各自所有者。
 **再分发本仓库或其衍生作品时需保留该署名文件。**
 
 ## 二、字体
@@ -80,4 +75,4 @@ B 站 CDN 直接提供，未做转存或再分发。
 本项目仅作**指称性使用**以标识被描述的对象，不表示任何关联或背书。
 
 站内的厂商家徽是原创的 12×12 像素图形（`src/data/crests.ts`，以字符网格手工绘制），
-**未使用任何厂商的官方标识**。角色形象由第一节所述的开源素材合成。
+**未使用任何厂商的官方标识**。角色形象为本项目手绘原创，出处说明见第一节。

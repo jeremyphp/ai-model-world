@@ -95,7 +95,7 @@ function matchTraits(model: ModelRecord, ctx: TraitContext, now: Date): Trait[] 
   const age = daysSince(model.releaseDate, now);
 
   if (eci === 1) {
-    push({ id: 'strongest', label: '全球第一', tone: 'crown', title: '综合智力指数全球第一' });
+    push({ id: 'strongest', label: '峡谷第一', tone: 'crown', title: '综合智力指数峡谷第一' });
   } else if (eci != null && eci <= 5) {
     push({ id: 'top5', label: '五强', tone: 'crown', title: `综合智力第 ${eci} 名` });
   } else if (eci != null && eci <= 10) {
@@ -103,13 +103,13 @@ function matchTraits(model: ModelRecord, ctx: TraitContext, now: Date): Trait[] 
   }
 
   if (swe === 1) {
-    push({ id: 'best-coder', label: '编程第一', tone: 'cool', title: '第三方编程榜平均排名全球第一' });
+    push({ id: 'best-coder', label: '编程第一', tone: 'cool', title: '第三方编程榜平均排名峡谷第一' });
   } else if (swe != null && swe <= 5) {
     push({ id: 'coder', label: '编程好手', tone: 'cool', title: `第三方编程榜平均排名第 ${swe} 名` });
   }
 
   if (ctxRank === 1) {
-    push({ id: 'best-memory', label: '记性最好', tone: 'cool', title: '上下文窗口全球最大' });
+    push({ id: 'best-memory', label: '记性最好', tone: 'cool', title: '上下文窗口峡谷最大' });
   } else if (model.contextWindow != null && model.contextWindow >= 1_000_000) {
     push({ id: 'million', label: '百万记性', tone: 'cool', title: '上下文窗口达到百万 tokens' });
   }
@@ -119,7 +119,7 @@ function matchTraits(model: ModelRecord, ctx: TraitContext, now: Date): Trait[] 
   }
 
   if (cheap === 1) {
-    push({ id: 'cheapest', label: '全场最便宜', tone: 'good', title: '输出单价全球最低' });
+    push({ id: 'cheapest', label: '全场最便宜', tone: 'good', title: '输出单价峡谷最低' });
   } else if (cheap != null && ctx.pricedCount > 0 && cheap <= ctx.pricedCount * 0.15) {
     push({ id: 'cheap', label: '白菜价', tone: 'good', title: '输出单价处于最便宜的 15%' });
   } else if (

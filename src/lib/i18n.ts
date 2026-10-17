@@ -187,13 +187,13 @@ export interface Dict {
  *    「记性」比「上下文窗口」对外行更好懂，这类留着。
  */
 const zh: Dict = {
-  siteName: '大模型世界',
-  siteTagline: '一眼看懂大模型的当下格局',
+  siteName: '大模型王者峡谷',
+  siteTagline: '一眼看懂大模型英雄的当下格局',
   siteDescription:
-    '把每个大模型画成一个像素角色，用能力条和排行榜把「谁最聪明、谁最会编程、谁最便宜」摆在明面上。数据来自第三方公开评测，每 12 小时自动同步。',
+    '把每个大模型画成一位峡谷英雄，用能力条和排行榜把「谁最聪明、谁最会编程、谁最便宜」摆在明面上。数据来自第三方公开评测，每 12 小时自动同步。',
 
   nav: {
-    plaza: '广场',
+    plaza: '峡谷',
     chronicle: '时间线',
     leaderboard: '排行榜',
     compare: '对比',
@@ -260,7 +260,7 @@ const zh: Dict = {
   unknown: {
     sizeEstimated: '体型为估算值，官方从未公布参数量',
     sizeApprox: '参数量由型号名推断，非官方权重实测',
-    notRanked: '未参评',
+    notRanked: '未定级',
     noData: '暂无数据',
     singleSource: '单源数据，未经交叉校验',
     incomplete: '资料不全',
@@ -275,18 +275,18 @@ const zh: Dict = {
   },
 
   crown: {
-    gold: '全球第一',
-    laurel: '全球前五',
-    silver: '全球前十',
+    gold: '峡谷第一',
+    laurel: '峡谷前五',
+    silver: '峡谷前十',
   },
 
   plaza: {
     vendorCount: (n) => `${n} 家`,
     moreVendors: (n) => `还有 ${n} 家资料不全的厂商`,
     tier: {
-      top: '头部',
-      main: '主力',
-      unscored: '尚无评测',
+      top: '王者',
+      main: '星耀',
+      unscored: '未定级',
     },
     tierHint: {
       top: '实力排名前十的厂商，按各家头号模型的综合智力算',
@@ -301,7 +301,7 @@ const zh: Dict = {
   },
 
   champions: {
-    title: '今日格局',
+    title: '峡谷之巅',
     smart: '最聪明',
     code: '最会编程',
     value: '最划算',

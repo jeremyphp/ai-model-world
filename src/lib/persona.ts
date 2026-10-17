@@ -93,7 +93,7 @@ interface Domain {
 
 /** 域顺序即宽窄：靠前的更宽，挑选时优先。 */
 const DOMAINS: Domain[] = [
-  { id: 'all', prefix: '全世界', member: () => true },
+  { id: 'all', prefix: '全峡谷', member: () => true },
   { id: 'open', prefix: '开源模型里', member: (m) => m.openWeights === true },
   { id: 'east', prefix: '国内厂商里', member: (_m, v) => v?.continent === 'east' },
   { id: 'west', prefix: '国外厂商里', member: (_m, v) => v?.continent === 'west' },
@@ -239,7 +239,7 @@ function positioning(model: ModelRecord, ctx: PersonaContext): string | null {
     if (model.modalities.input.includes('image')) extra.push('会看图');
     else if (model.capabilities.reasoning === true) extra.push('会深思');
     const tail = extra.length > 0 ? `，${extra.join('、')}` : '';
-    return `综合智力全球第 ${rank}${tail}`;
+    return `综合智力峡谷第 ${rank}${tail}`;
   }
 
   const shelf = bookshelfOf(model);

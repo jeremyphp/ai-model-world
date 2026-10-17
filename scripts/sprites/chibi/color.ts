@@ -73,6 +73,12 @@ export function rampOf(line: string, shadow: string, base: string, light: string
   return [hex(line), hex(shadow), hex(base), hex(light), hex(highlight)];
 }
 
+/**
+ * 王者荣耀英雄风的金色。与前端皇冠、名牌金色同族（base #f5d76e），
+ * 铠甲包边、腰带、武器配件的金属件全用它，保证全站的金是同一块金。
+ */
+export const GOLD: Ramp = rampOf('#6b4d12', '#8a6415', '#f5d76e', '#ffe9a6', '#fff6d9');
+
 export function mix(a: Rgba, b: Rgba, t: number): Rgba {
   return [
     Math.round(a[0] + (b[0] - a[0]) * t),

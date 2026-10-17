@@ -15,7 +15,7 @@ import { chromium } from 'playwright';
 import { signsOf } from '../../../src/lib/derive.ts';
 import type { ModelRecord, WorldSnapshot } from '../../../src/lib/types.ts';
 import type { Raster } from '../raster.ts';
-import { DESIGNS, designFor, fallbackDesign, type Design } from './designs.ts';
+import { DESIGNS, designFor, fallbackDesign, gearFor, type Design } from './designs.ts';
 import { type ChibiFlags, renderFrame } from './render.ts';
 
 const ROOT = path.resolve(__dirname, '../../..');
@@ -62,15 +62,17 @@ async function main() {
   const cards: string[] = [];
   const BASE: ChibiFlags = { imageIn: true, audio: false, imageOut: false, openWeights: false };
   const addCard = async (d: Design, m: ModelRecord | undefined) => {
+    const vendorId = d.key.split('/')[0];
+    const geared = gearFor(d, { id: vendorId, name: vendorId, nameZh: d.name, accentColor: '#888888' });
     const file = `${d.key.replace('/', '--')}.png`;
-    fs.writeFileSync(path.join(OUT, file), await png(renderFrame(d, BASE).raster));
+    fs.writeFileSync(path.join(OUT, file), await png(renderFrame(geared, BASE).raster));
     const n = count.get(d.key) ?? 0;
     cards.push(`<figure class="card ${d.basis}">
   <img src="chibi/${file}" alt="${d.name}">
   <figcaption>
     <b>${d.name}</b><span class="tag">${BASIS[d.basis]}</span>
     <p>${d.note}</p>
-    <small>${m ? `示例：${m.name}` : '站内暂无模型'} · 覆盖 ${n} 个模型</small>
+    <small>武器：${geared.weapon ?? '-'} · ${m ? `示例：${m.name}` : '站内暂无模型'} · 覆盖 ${n} 个模型</small>
   </figcaption>
 </figure>`);
   };
@@ -86,7 +88,7 @@ async function main() {
   for (const [k] of fallbacks) await addCard(fallbackDesign(vendors.get(k)!), rep.get(k));
 
   // Capability props on one character: what stays per-model.
-  const demo = DESIGNS.anthropic;
+  const demo = gearFor(DESIGNS.anthropic, { id: 'anthropic', name: 'anthropic', nameZh: 'Claude 娘', accentColor: '#888888' });
   const props: [string, ChibiFlags][] = [
     ['纯文本（闭眼）', { imageIn: false, audio: false, imageOut: false, openWeights: false }],
     ['能看图（睁眼）', { imageIn: true, audio: false, imageOut: false, openWeights: false }],

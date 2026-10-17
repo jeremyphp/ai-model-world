@@ -21,6 +21,10 @@
 # B 站 Toy 的上传包，由 npm run toy:build 从 .next-toy 再生产
 /.toy-pkg/
 
+# 字体子集化工具（pyftsubset）的本地虚拟环境。npm run font 需要它，
+# 与代码无关，不入库。
+/.venv-font/
+
 # 精灵图是可再生产物：由 scripts/sprites/chibi/（角色设定与字符画）+ data/models.json 确定性生成，
 # 整轮约 7 秒。不提交是因为画法一旦改动就会一次性产生近 8 MB 新 blob，
 # 几次迭代就能把仓库撑爆。构建时由 prebuild 钩子生成。

@@ -8,13 +8,14 @@
 
 import type { SpriteAnchors } from '../../../src/lib/sprite/types.ts';
 import { blank, blit, bounds, type Box, type Raster } from '../raster.ts';
-import { arms, face, head, legs, neck, outfit, type EyeState, type OutfitStyle } from './body.ts';
-import { ramp } from './color.ts';
+import { arms, aura, belt, cape, face, head, legs, neck, outfit, pauldrons, type EyeState, type OutfitStyle } from './body.ts';
+import { GOLD, ramp } from './color.ts';
 import type { Design, Paint } from './designs.ts';
 import { ears, extra, headphones, key, letterBadge, ornament, paintbrush, tail } from './extras.ts';
 import { drawLayer, type Layer, type Material, type Palette } from './grid.ts';
 import { backHair, frontHair } from './hair.ts';
 import { GLYPHS } from '../font.ts';
+import { weaponLayers, LEFT_HAND_WEAPONS } from './weapons.ts';
 
 export const CELL = 64;
 export const COLUMNS = 9;
@@ -55,6 +56,9 @@ function paletteOf(d: Design): Palette {
     brush: ramp('#b07a4a'),
     brushTip: ramp('#e8506a'),
     key: ramp('#f2c14e'),
+    // 王者荣耀英雄风的铠甲金与武器钢
+    gold: GOLD,
+    weapon: ramp(d.weaponColor ?? '#c9cdd4'),
   };
   if (d.logo) for (const [k, v] of Object.entries(d.logo.colors)) pal[k] = material(v);
   if (d.letter) {
@@ -106,15 +110,19 @@ function build(d: Design, flags: ChibiFlags, eyes: EyeState): Built {
   };
   const extras = new Set((d.extras ?? []).map((e) => e.kind));
 
+  // 王者荣耀英雄风的底层：光环 → 披风 → 尾巴（尾巴压在披风上）→ 后发
+  push(aura());
+  push(cape());
   if (d.tail) push(tail(d.tail.style));
   push(backHair(d.hairStyle), true);
   if (d.ears) push(ears(d.ears.style), true);
   push(legs(d.boots ? 'boot' : 'shoe'));
   push(neck);
   push(outfit(d.outfit));
+  push(belt());
   if (extras.has('scarf')) push(extra('scarf'));
   push(arms(d.sleeves ?? 'long', SLEEVE_MAT[d.outfit]));
-  if (flags.openWeights) push(key);
+  push(pauldrons());
   if (flags.imageOut) push(paintbrush);
   const skullIdx = layers.length;
   push(head, true);
@@ -127,6 +135,13 @@ function build(d: Design, flags: ChibiFlags, eyes: EyeState): Built {
   }
   if (d.logo) push(ornament(d.logo.id, d.logo.side), true);
   if (d.letter) push(letterBadge(d.letter.side, GLYPHS[d.letter.char] ?? GLYPHS['?']), true);
+  // 武器画在身体与头饰之后：拿在手上的东西要在最前面。
+  // 会出图的模型右手换成画笔——画笔就是画师的武器；盾与法典在左手，仍可共存。
+  const wield = d.weapon ?? 'sword';
+  const leftHand = LEFT_HAND_WEAPONS.includes(wield);
+  if (!flags.imageOut || leftHand) push(weaponLayers(wield, d.weaponSide === 'left' && !leftHand));
+  // 钥匙最后画：左手持武时它挂在武器前而不是被杆子盖住
+  if (flags.openWeights) push(key);
   return { layers, headIdx, skullIdx, palette: paletteOf(d) };
 }
 

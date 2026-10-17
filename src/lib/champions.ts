@@ -149,7 +149,7 @@ export function buildChampions(
     'value',
     best(alive, valueOf),
     (_v, m) => `${shortPrice(m.pricing.outputPerMTok!)}/M`,
-    (_v, m) => `智力全球 #${ranks.get(m.id)}，价格远低于同级`,
+    (_v, m) => `智力峡谷 #${ranks.get(m.id)}，价格远低于同级`,
   );
 
   push(
@@ -189,7 +189,7 @@ export function buildChampions(
       (m) => m.benchmarks.eci,
     ),
     (v) => `ECI ${v.toFixed(0)}`,
-    (_v, m) => `国内第一，全球 #${ranks.get(m.id)}`,
+    (_v, m) => `国内第一，峡谷 #${ranks.get(m.id)}`,
   );
 
   push(
@@ -199,7 +199,7 @@ export function buildChampions(
       (m) => m.benchmarks.eci,
     ),
     (v) => `ECI ${v.toFixed(0)}`,
-    (_v, m) => `开源第一，全球 #${ranks.get(m.id)}`,
+    (_v, m) => `开源第一，峡谷 #${ranks.get(m.id)}`,
   );
 
   return out;
