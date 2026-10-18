@@ -17,12 +17,20 @@ const dict = getDict(DEFAULT_LANG);
 const fontFace = `@font-face{font-family:'Fusion Pixel';src:url('${asset('/fonts/pixel-zh.woff2')}') format('woff2');font-weight:400;font-style:normal;font-display:swap}`;
 
 export const metadata: Metadata = {
+  // 社交卡片与搜索收录都用这个基准域名；环境变量优先，Toy 版不设（分享卡片无所谓）。
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aimodle.cn'),
   title: {
     default: `${dict.siteName} · ${dict.siteTagline}`,
     template: `%s · ${dict.siteName}`,
   },
   description: dict.siteDescription,
   applicationName: dict.siteName,
+  openGraph: {
+    type: 'website',
+    siteName: dict.siteName,
+    locale: 'zh_CN',
+    description: dict.siteDescription,
+  },
 };
 
 export const viewport: Viewport = {
