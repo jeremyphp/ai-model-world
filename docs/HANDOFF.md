@@ -993,6 +993,21 @@ SWE-bench Verified 的最高分。那张榜只有 25 个模型，Fable 5 / Opus 
 - 精灵管线版本 2.0.0 → 3.0.0，`npm run sprites` 已全量重出。
   体检新增 `scripts/qa/verify-theme.ts`（DOM 级主题自检）。
 
+### 2026-10-18：福利情报板块（收入引擎）
+
+用户要做「每日有收入」的 AI 工具导航。结论：工具大全已是红海、且工具数据没有统一注册表可抓；
+改做差异化的「福利情报」板块（/welfare/，导航「福利」入口）：
+
+- **API 价格雷达**（全自动）：`src/lib/welfare.ts` 的 `buildPriceRadar` 纯函数，
+  15 个模型家族按输入价排序，取每族最便宜的调用渠道。数据来自 models.json 快照，
+  每 12h 随 sync 自动刷新——这是工具导航做不出的「引擎」。
+  排除 OCR/音频/向量等非对话端点（NON_CHAT 正则），否则「最低」会标给 OCR。
+- **返佣福利榜 + 免费额度播报**（人工核实）：`src/data/welfare.ts`，每条带 checkedAt 复核日期。
+  红线：只写核实的数字，活动结束就下架（Novita referral 已结束、OpenRouter 无返佣，均已记录）。
+- 变现闭环：读者来薅羊毛 → 点返佣链接注册 → 平台返佣进账。广告法标识沿用 AffiliateStrip 规则。
+- 域名：aimodle.cn（西部数码注册，TXT/CNAME/A 三条记录已配）；CakeGrowth 资源审核中，
+  目标火山引擎联盟（CPA ¥4）+ Loomy（CPA ¥8）。硅基流动推荐官码 x6cMnHEd 已上线。
+
 ### 2026-10-17：更新引擎 + 返佣变现 + 上线
 
 用户要「运营主管」视角：模型一更新要第一时间知道，还要挣点饮料钱。三件套，全部零后端：
