@@ -25,5 +25,5 @@ export function loadChangelog(): ChangeEntry[] {
 
 /** RSS / issue 用的站点根地址。部署到正式域名后改 Vercel 环境变量 NEXT_PUBLIC_SITE_URL 即可。 */
 export function siteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ai-model-world.vercel.app';
+  return process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aimodle.cn';
 }
