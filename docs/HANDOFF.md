@@ -1010,7 +1010,9 @@ SWE-bench Verified 的最高分。那张榜只有 25 个模型，Fable 5 / Opus 
   带广告法「广告」标识 + `rel="nofollow sponsored"`；**Toy 版整块不渲染**（`outbound.ts` 的 `isToyBuild()`）。
   推广码是 YOUR_CODE 占位符，用户换自己的码前别当收入源。
 - **上线**：fork `jeremyphp/ai-model-world` 的 Actions 已启用（sync 工作流手动触发验证通过，
-  每 12h cron）；Vercel 生产域名 `https://ai-model-world-shmitteam.vercel.app`。
+  每 12h cron）；Vercel 生产域名 `https://aimodle.cn`（旧地址 ai-model-world-shmitteam.vercel.app 继续可用）。
+  自定义域名 aimodle.cn 在西部数码注册，DNS 三条记录（TXT _cgd-verify / CNAME www / A @）；
+  返佣码：硅基流动 x6cMnHEd（推荐官计划），Novita 与火山方舟（CakeGrowth 联盟）待填。
   部署关键坑：Next 16 的 `output:'export'` 直接写进 distDir，不产 routes-manifest.json，
   Vercel 的 Next 预设会报 NEXT_NO_ROUTES_MANIFEST——**项目 framework 已切 null（静态托管）**，
   buildCommand `NEXT_DIST_DIR=out npm run build`、outputDirectory `out`；
