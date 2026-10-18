@@ -993,6 +993,30 @@ SWE-bench Verified 的最高分。那张榜只有 25 个模型，Fable 5 / Opus 
 - 精灵管线版本 2.0.0 → 3.0.0，`npm run sprites` 已全量重出。
   体检新增 `scripts/qa/verify-theme.ts`（DOM 级主题自检）。
 
+### 2026-10-17：更新引擎 + 返佣变现 + 上线
+
+用户要「运营主管」视角：模型一更新要第一时间知道，还要挣点饮料钱。三件套，全部零后端：
+
+- **更新引擎**（数据管线内）：sync 工作流在覆盖快照前先把旧 models.json 备份到 /tmp，
+  sync 后用 `scripts/sync/changelog.ts` 对比新旧快照，四类变化（新模型 / 退役 /
+  新厂商 / 门面换代+冠军易主——后两者直接复用 `buildPlazaRoster` 与 `buildChampions`，
+  不另写一套判定）落成一条 `data/changelog.json` 条目（顶层 data/*.json，随快照同一个 commit）。
+  有变化时工作流再往「模型更新速报」issue 追加评论——**订阅者 watch 仓库即收通知**。
+  `diffSnapshots` 是纯函数，进 selftest（现 228 项）。
+- **站内消费面**：`/changelog/` 更新日志页 + `/changelog.rss`（force-static 路由，
+  与页读同一份 changelog.json，不会各说各话），导航加「更新」入口。
+  RSS 域名取 `NEXT_PUBLIC_SITE_URL` 环境变量（Vercel 已设）。
+- **返佣联盟**（`src/data/affiliates.ts`）：详情页与排行榜底部一行 12px「广告 · API 优惠」，
+  带广告法「广告」标识 + `rel="nofollow sponsored"`；**Toy 版整块不渲染**（`outbound.ts` 的 `isToyBuild()`）。
+  推广码是 YOUR_CODE 占位符，用户换自己的码前别当收入源。
+- **上线**：fork `jeremyphp/ai-model-world` 的 Actions 已启用（sync 工作流手动触发验证通过，
+  每 12h cron）；Vercel 生产域名 `https://ai-model-world-shmitteam.vercel.app`。
+  部署关键坑：Next 16 的 `output:'export'` 直接写进 distDir，不产 routes-manifest.json，
+  Vercel 的 Next 预设会报 NEXT_NO_ROUTES_MANIFEST——**项目 framework 已切 null（静态托管）**，
+  buildCommand `NEXT_DIST_DIR=out npm run build`、outputDirectory `out`；
+  另外项目曾开 `ssoProtection`（CLI 创建的默认），会把 vercel.app 域名弹到登录页，已关。
+  后续每次 push main 自动部署。
+
 ### 2026-09-26：角色换成各家固定的像素娘化形象
 
 用户原话：「现在是具有随机性的，要求二次元像素风格的形象必须和各家模型代表的娘化形象（优先级最高）或者图标强相关」。
