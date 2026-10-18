@@ -52,6 +52,7 @@ import {
 } from './sources/models-dev';
 import { validateSnapshot } from './validate';
 import { diffSnapshots } from './lib/changelog';
+import { buildPriceRadar } from '../../src/lib/welfare';
 import type { BenchmarkScore, ModelRecord, WorldSnapshot } from '../../src/lib/types';
 
 let passed = 0;
@@ -1271,6 +1272,32 @@ check('变更日志：新模型被看见', changelogDiff?.newModels.map((m) => m
 check('变更日志：退役被看见', changelogDiff?.retired.map((m) => m.id), ['a/m2']);
 check('变更日志：新厂商被看见', changelogDiff?.newVendors.map((v) => v.id), ['c']);
 check('变更日志：没有变化时返回 null', diffSnapshots(changelogOld, changelogOld), null);
+
+// ── 福利价格雷达 ──────────────────────────────────────────────────
+// buildPriceRadar 是福利页的自动引擎：同家族按输入价排序，第一档必须是最便宜的调用渠道。
+// 用极小 fixture 验三件事：排序正确、退役排除、无价排除、厂商名回退。
+const radarVendors = [
+  { id: 'a', name: 'A', nameZh: '厂商甲', country: 'US', continent: 'west' as const, motif: 'wanderer' as const, accentColor: '#000', homepage: null },
+  { id: 'b', name: 'B', nameZh: '厂商乙', country: 'US', continent: 'west' as const, motif: 'wanderer' as const, accentColor: '#000', homepage: null },
+];
+const radarModels = [
+  model({ id: 'a/deepseek-chat', slug: 'a-deepseek-chat', name: 'DeepSeek Chat', vendorId: 'a', pricing: { inputPerMTok: 0.5, outputPerMTok: 1.5, cachedInputPerMTok: null } }),
+  model({ id: 'b/deepseek-v3', slug: 'b-deepseek-v3', name: 'DeepSeek V3', vendorId: 'b', pricing: { inputPerMTok: 0.2, outputPerMTok: 0.6, cachedInputPerMTok: null } }),
+  model({ id: 'a/deepseek-retired', slug: 'a-deepseek-retired', name: 'DeepSeek Old', vendorId: 'a', retiredAt: '2026-01-01', pricing: { inputPerMTok: 0.01, outputPerMTok: 0.01, cachedInputPerMTok: null } }),
+  model({ id: 'a/deepseek-noprice', slug: 'a-deepseek-noprice', name: 'DeepSeek NoPrice', vendorId: 'a', pricing: { inputPerMTok: null, outputPerMTok: null, cachedInputPerMTok: null } }),
+];
+const radar = buildPriceRadar(radarModels, radarVendors as unknown as WorldSnapshot['vendors']);
+check('价格雷达：DeepSeek 家族命中', radar.map((f) => f.key), ['deepseek']);
+check('价格雷达：最便宜的排在第一位', radar[0]?.offers[0]?.modelId, 'b/deepseek-v3');
+check('价格雷达：退役模型不参与', radar[0]?.offers.some((o) => o.modelId.includes('retired')), false);
+check('价格雷达：无价格模型不参与', radar[0]?.offers.some((o) => o.modelId.includes('noprice')), false);
+check('价格雷达：厂商中文名回退', radar[0]?.offers[0]?.vendorZh, '厂商乙');
+
+const radarOcr = buildPriceRadar(
+  [model({ id: 'a/deepseek-ocr-2', slug: 'a-ocr', name: 'DeepSeek OCR 2', vendorId: 'a', pricing: { inputPerMTok: 0.01, outputPerMTok: 0.01, cachedInputPerMTok: null } })],
+  radarVendors as unknown as WorldSnapshot['vendors'],
+);
+check('价格雷达：OCR 专用端点不进雷达', radarOcr.length, 0);
 
 // ── 汇总 ──────────────────────────────────────────────────────────────
 console.log(`\n自检完成：${passed} 项通过，${failures.length} 项失败`);

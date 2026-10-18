@@ -13,13 +13,14 @@ import { GlobalSearch } from './GlobalSearch';
  * 「已退役」页曾是第四个入口，后来撤掉：退役模型在排行榜的「含已退役」筛选和详情页里都能看到，
  * 单独一页对读者没有增量信息。
  */
-export type NavKey = 'plaza' | 'chronicle' | 'leaderboard' | 'compare' | 'changelog';
+export type NavKey = 'plaza' | 'chronicle' | 'leaderboard' | 'compare' | 'changelog' | 'welfare';
 
 const ITEMS: { key: NavKey; href: string }[] = [
   { key: 'plaza', href: '/' },
   { key: 'chronicle', href: '/chronicle/' },
   { key: 'leaderboard', href: '/leaderboard/' },
   { key: 'compare', href: '/compare/' },
+  { key: 'welfare', href: '/welfare/' },
   { key: 'changelog', href: '/changelog/' },
 ];
 
