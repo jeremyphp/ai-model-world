@@ -33,8 +33,8 @@ export const AFFILIATES: Affiliate[] = [
   {
     id: 'siliconflow',
     name: '硅基流动',
-    hint: '国内 API 平台，按量计费，新用户有免费额度',
-    url: 'https://cloud.siliconflow.cn/i/YOUR_CODE',
+    hint: '国内 API 平台，按量计费，新用户注册送代金券',
+    url: 'https://cloud.siliconflow.cn/i/x6cMnHEd',
   },
   {
     id: 'novita',
