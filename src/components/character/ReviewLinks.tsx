@@ -2,12 +2,6 @@ import { CompareButton } from '@/components/compare/CompareButton';
 import { getDict, type Lang } from '@/lib/i18n';
 
 /**
- * 鱼皮 AI 导航「模型动态」板块：新模型的实测与横向对比文章都汇总在这一页。
- * 固定地址，不随模型变化——那边是人工精选的合集，本站不去猜某个模型对应哪篇。
- */
-const ARTICLE_URL = 'https://ai.codefather.cn/library/2072330710215032834';
-
-/**
  * B 站搜索页。搜索词由模型名现算，所以新模型上线当天这个按钮就是通的，
  * 不需要维护「模型 → 视频」的对应表，也不需要抓取、存储任何站外内容。
  */
@@ -27,25 +21,17 @@ function PlayIcon() {
   );
 }
 
-function DocIcon() {
-  return (
-    <svg width={12} height={12} viewBox="0 0 12 12" shapeRendering="crispEdges" aria-hidden>
-      <rect x="2" y="1" width="8" height="10" fill="currentColor" opacity="0.25" />
-      <rect x="4" y="3" width="4" height="1" fill="currentColor" />
-      <rect x="4" y="5" width="4" height="1" fill="currentColor" />
-      <rect x="4" y="7" width="3" height="1" fill="currentColor" />
-    </svg>
-  );
-}
-
 /**
- * 两个站外深链接，跟在一句话定位后面。
+ * 站外深链接，跟在一句话定位后面。
  *
  * 不给它单开一节：那一节里除了按钮什么都没有，标题与免责声明加起来比按钮还长，
  * 等于用一整块版面说「这里没内容」。本站只出门、不搬运——中文的模型评价散在视频与
  * 个人博客里，既没有可复用的许可，也没有能自动核对的结构，抓过来会同时破坏
  * 「每个数字有出处」和「零人工维护」两条底线。做成深链接后，新模型无需任何同步
  * 就自带入口，读者点出去看的是原始出处。
+ *
+ * 只有一个 B 站搜索按钮：原先还有个「查看评测文章」指向第三方导航站的固定页，
+ * 那条既不可维护也不该给别家导流，已下线。
  */
 export function ReviewLinks({ modelName, slug, lang }: { modelName: string; slug: string; lang: Lang }) {
   const dict = getDict(lang);
@@ -53,7 +39,7 @@ export function ReviewLinks({ modelName, slug, lang }: { modelName: string; slug
     'pixel-button flex items-center gap-1.5 px-2 py-0.5 text-[12px] leading-tight text-[var(--color-ink)] hover:bg-[var(--color-gold)]';
   return (
     <div className="mt-3 flex flex-wrap gap-2">
-      {/* 站内的动作排在两个出站链接前面 */}
+      {/* 站内的动作排在出站链接前面 */}
       <CompareButton slug={slug} className={cls} />
       <a
         href={bilibiliSearch(modelName)}
@@ -64,16 +50,6 @@ export function ReviewLinks({ modelName, slug, lang }: { modelName: string; slug
       >
         <PlayIcon />
         {dict.reviews.video}
-      </a>
-      <a
-        href={ARTICLE_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={dict.reviews.articleHint}
-        className={cls}
-      >
-        <DocIcon />
-        {dict.reviews.article}
       </a>
     </div>
   );

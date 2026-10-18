@@ -166,15 +166,13 @@ export interface Dict {
   };
 
   /**
-   * 模型详情页名牌上的两个站外入口。本站只给链接不搬运正文：
+   * 模型详情页名牌上的站外入口。本站只给链接不搬运正文：
    * B 站搜索词由模型名现算，新模型上线当天链接就是通的，没有要维护的清单。
    * 出处与免责写在按钮的悬停提示里，不占版面。
    */
   reviews: {
     video: string;
-    article: string;
     videoHint: (name: string) => string;
-    articleHint: string;
   };
 }
 
@@ -333,9 +331,7 @@ const zh: Dict = {
 
   reviews: {
     video: '查看评测视频',
-    article: '查看评测文章',
     videoHint: (name) => `站外链接：到 B 站搜「${name} 测评」，看别人实测的视频`,
-    articleHint: '站外链接：鱼皮 AI 导航的「模型动态」，新模型的实测与横向对比文章',
   },
 };
 

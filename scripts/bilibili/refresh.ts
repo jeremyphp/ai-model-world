@@ -21,8 +21,8 @@ import path from 'node:path';
 import { baseName, MAX_PER_MODEL, pickVideos, type VideoLibrary, type VideoRecord } from '../../src/lib/videos.ts';
 import type { ModelRecord, WorldSnapshot } from '../../src/lib/types.ts';
 
-/** 站长的 mid，他的视频在列表里置顶并打标 */
-const AUTHOR_MID = 12890453;
+/** 历史字段的写入值：置顶规则已撤掉，写 0 表示「不偏向任何 UP 主」 */
+const AUTHOR_MID = 0;
 /** 搜索词后缀。「测评」比「实测」「评测」召回都好，只发一个请求就用它 */
 const KEYWORD = '测评';
 
@@ -168,7 +168,7 @@ async function gather(
       if (outcome.kind === 'empty') break;
 
       candidates.push(...outcome.items);
-      if (pickVideos(names, candidates, AUTHOR_MID).length >= MAX_PER_MODEL) {
+      if (pickVideos(names, candidates).length >= MAX_PER_MODEL) {
         return { candidates, banned: null };
       }
       if (outcome.items.length < PAGE_SIZE) break;
@@ -251,7 +251,7 @@ async function main() {
       break;
     }
 
-    const videos = pickVideos(names, got.candidates, AUTHOR_MID);
+    const videos = pickVideos(names, got.candidates);
     // 合并了两次搜索时，标题上显示不带日期的那个名字：列表里多数视频讲的是整条线
     const matchedName = base ?? m.name;
 

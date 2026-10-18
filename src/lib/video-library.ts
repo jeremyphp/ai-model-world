@@ -10,7 +10,7 @@ import type { VideoLibrary } from './videos';
  * `npm run bilibili`，站点都该照常构建，只是详情页少一块。
  */
 
-const EMPTY: VideoLibrary = { fetchedAt: '', keyword: '测评', authorMid: 12890453, byModel: {} };
+const EMPTY: VideoLibrary = { fetchedAt: '', keyword: '测评', authorMid: 0, byModel: {} };
 
 let cache: VideoLibrary | null = null;
 
