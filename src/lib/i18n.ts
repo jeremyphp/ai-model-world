@@ -156,13 +156,13 @@ export interface Dict {
     dataFrom: string;
     artFrom: string;
     credits: string;
-    /** 站长署名前缀，拼成「作者：程序员鱼皮」 */
+    /** 站长署名前缀，拼成「作者：jeremy」 */
     author: string;
-    /** 引流按钮前的引语 */
-    alsoVisit: string;
     /** 开源仓库入口 */
     sourceCode: string;
     sourceCodeHint: string;
+    /** 二次开发来源声明（MIT 要求保留版权声明） */
+    basedOn: string;
   };
 
   /**
@@ -326,9 +326,9 @@ const zh: Dict = {
     artFrom: '字体',
     credits: '素材署名',
     author: '作者',
-    alsoVisit: '也看看',
     sourceCode: '源码开源',
     sourceCodeHint: '本站代码、数据管线与抓取脚本全部开源（MIT），在 GitHub 上',
+    basedOn: '本站基于 liyupi/ai-model-world 二次开发（MIT），原版权归原作者',
   },
 
   reviews: {

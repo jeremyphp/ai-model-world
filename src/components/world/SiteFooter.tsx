@@ -28,37 +28,24 @@ const ART_SOURCES = [
   },
 ];
 
-/** 站长与他的其他站点。放在页脚最上面一行，是全站唯一的引流位。站长名链到 B 站主页。 */
-const AUTHOR = { name: '程序员鱼皮', href: 'https://space.bilibili.com/12890453' };
+/** 站长署名。链到 GitHub 主页——本站不再挂第三方站点的引流按钮，页脚只留自己的身份。 */
+const AUTHOR = { name: 'jeremy', href: 'https://github.com/jeremyphp' };
 
 /**
- * 开源仓库。
+ * 开源仓库（本站自己的 fork）。
  *
- * 放在页脚下半段的署名区，与数据源、美术素材并排，而不是挤进上面那排引流按钮——
- * 那一排留给站长自己的站点。这里的三行本来就是在回答「这些东西都是哪来的」，
- * 「代码本身也是公开的」正好是同一个问题的最后一问。
+ * 放在页脚下半段的署名区，与数据源、美术素材并排，而不是挤进上面那排——
+ * 这里的三行本来就是在回答「这些东西都是哪来的」，「代码本身也是公开的」正好是同一个问题的最后一问。
  */
-const REPO = { name: 'liyupi/ai-model-world', href: 'https://github.com/liyupi/ai-model-world' };
+const REPO = { name: 'jeremyphp/ai-model-world', href: 'https://github.com/jeremyphp/ai-model-world' };
 
-/** 免费教程单独拎出来做主按钮：三个站点并列时它会被淹没，而它是这里最值得点的一个。 */
-const TUTORIAL = {
-  name: 'AI 编程入门教程',
-  blurb: '零基础学 Vibe Coding',
-  href: 'https://ai.codefather.cn/vibe',
-};
-
-const AUTHOR_SITES = [
-  {
-    name: '鱼皮 AI 导航',
-    blurb: 'AI 工具、资讯与提示词大全',
-    href: 'https://ai.codefather.cn',
-  },
-  {
-    name: '编程导航',
-    blurb: '程序员一站式编程学习交流社区',
-    href: 'https://www.codefather.cn',
-  },
-];
+/**
+ * 上游项目。
+ *
+ * 本项目是 liyupi/ai-model-world 的二次开发。MIT 协议只要求源码保留版权声明，
+ * 不强制页脚署名；但把来源写清楚既是履约，也是不让读者误以为完全原创。
+ */
+const UPSTREAM = { name: 'liyupi/ai-model-world', href: 'https://github.com/liyupi/ai-model-world' };
 
 /** 一条像素小鱼，站长的徽记 */
 function FishCrest({ size = 14 }: { size?: number }) {
@@ -113,8 +100,8 @@ export function SiteFooter() {
     <footer className="relative mt-12 border-t border-white/10 bg-black/40">
       <div className="mx-auto max-w-6xl px-4 py-5 text-[12px] leading-relaxed text-[var(--color-ghost)] sm:px-8">
         {/*
-          站长与他的另外两个站。做成一排像素按钮而不是一行小字：
-          这是全站唯一的引流位，得让人看见；但只占一行，不抢正文。
+          站长署名。做成一排像素按钮而不是一行小字：这是全站唯一的身份位，得让人看见；
+          但只占一行，不抢正文。不再挂第三方站点的引流按钮。
         */}
         <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-white/10 pb-4">
           <a
@@ -126,31 +113,6 @@ export function SiteFooter() {
             <FishCrest />
             {dict.footer.author}：{AUTHOR.name}
           </a>
-          <span className="hidden opacity-40 sm:inline">|</span>
-          <a
-            href={TUTORIAL.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={TUTORIAL.blurb}
-            className="pixel-button flex items-center gap-1.5 bg-[var(--color-gold)] px-2 py-0.5 text-[12px] leading-tight text-[var(--color-ink)] hover:brightness-110"
-          >
-            <span className="font-semibold">{TUTORIAL.name}</span>
-            <span className="hidden text-[var(--color-ink-soft)] sm:inline">{TUTORIAL.blurb}</span>
-          </a>
-          <span className="text-[var(--color-ghost)]">{dict.footer.alsoVisit}</span>
-          {AUTHOR_SITES.map((s) => (
-            <a
-              key={s.href}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={s.blurb}
-              className="pixel-button flex items-center gap-1.5 px-2 py-0.5 text-[12px] leading-tight text-[var(--color-ink)] hover:bg-[var(--color-gold)]"
-            >
-              <span className="font-semibold">{s.name}</span>
-              <span className="hidden text-[var(--color-ink-soft)] sm:inline">{s.blurb}</span>
-            </a>
-          ))}
         </div>
 
         <div className="flex flex-wrap gap-x-1.5 gap-y-1">
@@ -184,6 +146,10 @@ export function SiteFooter() {
           <span>{dict.footer.sourceCode}</span>
           <ExtLink href={REPO.href}>{REPO.name}</ExtLink>
           <span className="opacity-70">（MIT）</span>
+        </div>
+        <div className="mt-1 flex flex-wrap gap-x-1.5 gap-y-1">
+          <span>{dict.footer.basedOn}</span>
+          <ExtLink href={UPSTREAM.href}>{UPSTREAM.name}</ExtLink>
         </div>
       </div>
     </footer>

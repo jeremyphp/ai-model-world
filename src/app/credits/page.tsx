@@ -28,6 +28,8 @@ const CHARACTER_SOURCES: { who: string; basis: string; href?: string }[] = [
 
 const LMARENA_DATASET = 'https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset';
 
+const UPSTREAM_REPO = 'https://github.com/liyupi/ai-model-world';
+
 export default function CreditsPage() {
   const lang = DEFAULT_LANG;
   const dict = getDict(lang);
@@ -40,6 +42,32 @@ export default function CreditsPage() {
 
         <div className="mx-auto w-full max-w-5xl px-4 pb-16 pt-4 sm:px-8">
           <h1 className="pixel-outline mb-2 mt-4 text-2xl sm:text-3xl">{dict.footer.credits}</h1>
+
+          {/*
+            项目来源声明。MIT 只要求源码保留版权声明，这里再写一遍是诚实起见：
+            本站是二次开发，不是从零开始的原创项目，读者有权知道这一点。
+          */}
+          <section className="pixel-panel-dark mb-6 p-4">
+            <h2 className="mb-2 font-pixel text-[14px] text-[var(--color-gold)]">项目来源</h2>
+            <p className="text-[13px] leading-relaxed text-[var(--color-parchment)]">
+              本站基于{' '}
+              {outbound(UPSTREAM_REPO) ? (
+                <a
+                  href={UPSTREAM_REPO}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-dotted underline-offset-2 hover:text-[var(--color-gold)]"
+                >
+                  liyupi/ai-model-world
+                </a>
+              ) : (
+                'liyupi/ai-model-world'
+              )}{' '}
+              二次开发，按 MIT 协议使用。数据管线、角色形象与页面结构源自上游，本站对其做了主题重制、
+              功能扩展（福利情报、更新日志）与价格数据的重新组织；原版权归原作者所有。
+            </p>
+          </section>
+
           <section className="pixel-panel-dark mb-6 p-4">
             <h2 className="mb-2 font-pixel text-[14px] text-[var(--color-gold)]">角色形象</h2>
             <p className="mb-2 text-[13px] leading-relaxed text-[var(--color-parchment)]">
