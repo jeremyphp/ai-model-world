@@ -1,0 +1,26 @@
+[
+ {
+  "newModels": [
+   {
+    "id": "deepseek/deepseek-v4.1-flash-1017-fast",
+    "name": "Deepseek V4.1 Flash 1017 Fast",
+    "slug": "deepseek-deepseek-v4-1-flash-1017-fast",
+    "vendorZh": "深度求索"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Muse Spark Open",
+    "after": "Deepseek V4.1 Flash 1017 Fast",
+    "slug": "deepseek-deepseek-v4-1-flash-1017-fast"
+   }
+  ],
+  "date": "2026-10-18T16:53:30.005Z",
+  "summary": "**新模型（1）**\n- Deepseek V4.1 Flash 1017 Fast · 深度求索\n**冠军易主（1）**\n- 最新发布：Muse Spark Open → Deepseek V4.1 Flash 1017 Fast"
+ }
+]
