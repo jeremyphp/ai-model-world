@@ -22,6 +22,7 @@ export interface Dict {
     compare: string;
     changelog: string;
     welfare: string;
+    apps: string;
   };
 
   continent: {
@@ -199,6 +200,7 @@ const zh: Dict = {
     compare: '对比',
     changelog: '更新',
     welfare: '福利',
+    apps: '应用',
   },
 
   continent: {
