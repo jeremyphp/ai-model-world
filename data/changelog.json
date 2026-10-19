@@ -2,6 +2,44 @@
  {
   "newModels": [
    {
+    "id": "inception/mercury-3",
+    "name": "Mercury 3",
+    "slug": "inception-mercury-3",
+    "vendorZh": "Inception"
+   },
+   {
+    "id": "minimax/minimax-m3.1-flash",
+    "name": "MiniMax-M3.1-Flash",
+    "slug": "minimax-minimax-m3-1-flash",
+    "vendorZh": "MiniMax"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "inception",
+    "vendorZh": "Inception",
+    "before": "Mercury 2.5",
+    "after": "Mercury 3",
+    "slug": "inception-mercury-3"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Deepseek V4.1 Flash 1017 Fast",
+    "after": "MiniMax-M3.1-Flash",
+    "slug": "minimax-minimax-m3-1-flash"
+   }
+  ],
+  "date": "2026-10-19T19:28:45.778Z",
+  "summary": "**新模型（2）**\n- Mercury 3 · Inception\n- MiniMax-M3.1-Flash · MiniMax\n**门面换代（1）**\n- Inception：Mercury 2.5 → Mercury 3\n**冠军易主（1）**\n- 最新发布：Deepseek V4.1 Flash 1017 Fast → MiniMax-M3.1-Flash"
+ },
+ {
+  "newModels": [
+   {
     "id": "deepseek/deepseek-v4.1-flash-1017-fast",
     "name": "Deepseek V4.1 Flash 1017 Fast",
     "slug": "deepseek-deepseek-v4-1-flash-1017-fast",
