@@ -2,6 +2,49 @@
  {
   "newModels": [
    {
+    "id": "xai/grok-tts",
+    "name": "Grok TTS",
+    "slug": "xai-grok-tts",
+    "vendorZh": "xAI"
+   },
+   {
+    "id": "xai/grok-voice-transcribe-2.0",
+    "name": "Grok Voice Transcribe 2.0",
+    "slug": "xai-grok-voice-transcribe-2-0",
+    "vendorZh": "xAI"
+   }
+  ],
+  "retired": [
+   {
+    "id": "xai/grok-voice-stt-1.0",
+    "name": "Grok Voice STT 1.0",
+    "slug": "xai-grok-voice-stt-1-0",
+    "vendorZh": "xAI"
+   },
+   {
+    "id": "xai/grok-voice-tts-1.0",
+    "name": "Grok Voice TTS 1.0",
+    "slug": "xai-grok-voice-tts-1-0",
+    "vendorZh": "xAI"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "sarvam",
+    "vendorZh": "Sarvam AI",
+    "before": "Sarvam 30B",
+    "after": "Sarvam 105B",
+    "slug": "sarvam-sarvam-105b"
+   }
+  ],
+  "champions": [],
+  "date": "2026-10-20T06:35:08.939Z",
+  "summary": "**新模型（2）**\n- Grok TTS · xAI\n- Grok Voice Transcribe 2.0 · xAI\n**退役（2）**\n- Grok Voice STT 1.0 · xAI\n- Grok Voice TTS 1.0 · xAI\n**门面换代（1）**\n- Sarvam AI：Sarvam 30B → Sarvam 105B"
+ },
+ {
+  "newModels": [
+   {
     "id": "inception/mercury-3",
     "name": "Mercury 3",
     "slug": "inception-mercury-3",
