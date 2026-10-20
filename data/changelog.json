@@ -1,5 +1,22 @@
 [
  {
+  "newModels": [],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "meta",
+    "vendorZh": "Meta",
+    "before": "Muse Spark Open",
+    "after": "Muse Wonder",
+    "slug": "meta-muse-wonder"
+   }
+  ],
+  "champions": [],
+  "date": "2026-10-20T18:06:52.201Z",
+  "summary": "**门面换代（1）**\n- Meta：Muse Spark Open → Muse Wonder"
+ },
+ {
   "newModels": [
    {
     "id": "xai/grok-tts",
