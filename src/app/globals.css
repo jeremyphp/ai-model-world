@@ -440,3 +440,9 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== 双币种价格：默认美元，切到 data-cur="cny" 显示人民币 ===== */
+html[data-cur='cny'] .price-usd { display: none; }
+html[data-cur='cny'] .price-cny { display: inline; }
+html:not([data-cur='cny']) .price-cny { display: none; }
+html:not([data-cur='cny']) .price-usd { display: inline; }

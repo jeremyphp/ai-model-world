@@ -2,11 +2,12 @@ import Link from 'next/link';
 import { GroundBackdrop } from '@/components/world/Ground';
 import { SiteHeader } from '@/components/world/SiteHeader';
 import { AffiliateStrip } from '@/components/world/AffiliateStrip';
+import { CurrencyToggle } from '@/components/world/CurrencyToggle';
+import { PriceBoth } from '@/components/world/PriceBoth';
 import { buildPriceRadar } from '@/lib/welfare';
 import { REBATES, WELFARE_NEWS } from '@/data/welfare';
 import { loadSnapshot } from '@/lib/snapshot';
 import { DEFAULT_LANG } from '@/lib/i18n';
-import { formatPrice } from '@/lib/format';
 
 export const metadata = { title: '福利情报' };
 
@@ -41,12 +42,13 @@ export default function WelfarePage() {
 
           {/* ── API 价格雷达 ─────────────────────────────────────── */}
           <section aria-label="API 价格雷达">
-            <h2 className="mb-1 font-pixel text-[16px] text-[var(--color-parchment)]">
-              API 价格雷达
-            </h2>
+            <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+              <h2 className="font-pixel text-[16px] text-[var(--color-parchment)]">API 价格雷达</h2>
+              <CurrencyToggle />
+            </div>
             <p className="mb-4 text-[13px] leading-relaxed text-[var(--color-ghost)]">
               同一个模型在不同平台差价可达数倍。每个家族按输入价从低到高列出前五档——第一档就是当前最便宜的调用渠道。
-              价格为美元/百万 tokens，数据自动同步。
+              价格为美元/百万 tokens，数据自动同步；点右上角可切换成人民币（按固定参考汇率换算）。
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -75,8 +77,7 @@ export default function WelfarePage() {
                           <span className="text-[var(--color-ghost)]"> · {o.name}</span>
                         </span>
                         <span className="shrink-0 text-[var(--color-ghost)]">
-                          入 {formatPrice(o.input, lang).replace(' / 百万 tokens', '')} / 出{' '}
-                          {formatPrice(o.output, lang).replace(' / 百万 tokens', '')}
+                          入 <PriceBoth usd={o.input} /> / 出 <PriceBoth usd={o.output} />
                         </span>
                       </li>
                     ))}
