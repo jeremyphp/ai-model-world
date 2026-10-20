@@ -1,8 +1,8 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { GroundBackdrop } from '@/components/world/Ground';
 import { SiteHeader } from '@/components/world/SiteHeader';
 import { AffiliateStrip } from '@/components/world/AffiliateStrip';
-import { listApps, APP_STATUS_META } from '@/lib/apps';
+import { listApps, withUtm, APP_STATUS_META } from '@/lib/apps';
 import { DEFAULT_LANG } from '@/lib/i18n';
 
 export const metadata = { title: '应用落地' };
@@ -70,7 +70,7 @@ export default function AppsPage() {
                   <div className="mt-3 flex items-center justify-between gap-2">
                     <span className="text-[12px] text-[var(--color-ghost)]">上线 {app.launchedAt}</span>
                     <a
-                      href={app.href}
+                      href={withUtm(app.href)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="pixel-button px-3 py-1.5 text-[13px] font-medium text-[var(--color-ink)]"

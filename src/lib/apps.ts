@@ -35,6 +35,20 @@ export const APP_STATUS_META: Record<AppStatus, { label: string; color: string; 
   wip: { label: '开发中', color: 'var(--color-ghost)', dim: true },
 };
 
+/**
+ * 给外链补 utm_source，让应用侧能看见「从主站来的」流量。
+ * 主站自己不做统计，归因全部交给目标应用（各自有 /admin/stats）。
+ */
+export function withUtm(href: string, source = 'aimodle'): string {
+  try {
+    const u = new URL(href);
+    if (!u.searchParams.has('utm_source')) u.searchParams.set('utm_source', source);
+    return u.toString();
+  } catch {
+    return href;
+  }
+}
+
 export const APPS: AppEntry[] = [
   {
     id: 'wuliao',
