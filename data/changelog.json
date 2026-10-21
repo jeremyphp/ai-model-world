@@ -1,5 +1,153 @@
 [
  {
+  "newModels": [
+   {
+    "id": "alibaba/qwen2.5-7b-instruct",
+    "name": "Qwen2.5 7B Instruct",
+    "slug": "alibaba-qwen2-5-7b-instruct",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "alibaba/qwen3.5-2b",
+    "name": "Qwen3.5 2B",
+    "slug": "alibaba-qwen3-5-2b",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "alibaba/qwen3.5-35b-a3b-base",
+    "name": "Qwen3.5 35B-A3B Base",
+    "slug": "alibaba-qwen3-5-35b-a3b-base",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "alibaba/qwen3.5-4b",
+    "name": "Qwen3.5 4B",
+    "slug": "alibaba-qwen3-5-4b",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "alibaba/qwen3.5-9b-base",
+    "name": "Qwen3.5 9B Base",
+    "slug": "alibaba-qwen3-5-9b-base",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "canopylabs/orpheus-arabic-saudi",
+    "name": "Orpheus Arabic Saudi",
+    "slug": "canopylabs-orpheus-arabic-saudi",
+    "vendorZh": "Canopylabs"
+   },
+   {
+    "id": "canopylabs/orpheus-v1-english",
+    "name": "Orpheus V1 English",
+    "slug": "canopylabs-orpheus-v1-english",
+    "vendorZh": "Canopylabs"
+   },
+   {
+    "id": "essentialai/rnj-1-instruct",
+    "name": "Rnj-1 Instruct",
+    "slug": "essentialai-rnj-1-instruct",
+    "vendorZh": "Essentialai"
+   },
+   {
+    "id": "inception/mercury-edit-2",
+    "name": "Mercury Edit 2",
+    "slug": "inception-mercury-edit-2",
+    "vendorZh": "Inception"
+   },
+   {
+    "id": "liquid/lfm2-24b-a2b",
+    "name": "LFM2 24B A2B",
+    "slug": "liquid-lfm2-24b-a2b",
+    "vendorZh": "Liquid AI"
+   },
+   {
+    "id": "meta/llama-prompt-guard-2-22m",
+    "name": "Llama Prompt Guard 2 22M",
+    "slug": "meta-llama-prompt-guard-2-22m",
+    "vendorZh": "Meta"
+   },
+   {
+    "id": "meta/llama-prompt-guard-2-86m",
+    "name": "Llama Prompt Guard 2 86M",
+    "slug": "meta-llama-prompt-guard-2-86m",
+    "vendorZh": "Meta"
+   },
+   {
+    "id": "nvidia/nemotron-3.5-super-120b-a12b",
+    "name": "Nemotron 3.5 Super 120B A12B",
+    "slug": "nvidia-nemotron-3-5-super-120b-a12b",
+    "vendorZh": "英伟达"
+   },
+   {
+    "id": "openbmb/minicpm-v-4.7-1b",
+    "name": "MiniCPM-V 4.7 1B",
+    "slug": "openbmb-minicpm-v-4-7-1b",
+    "vendorZh": "Openbmb"
+   },
+   {
+    "id": "openbmb/minicpm-v-4.7-35b-a3b",
+    "name": "MiniCPM-V 4.7 35B-A3B",
+    "slug": "openbmb-minicpm-v-4-7-35b-a3b",
+    "vendorZh": "Openbmb"
+   },
+   {
+    "id": "xiaomi/mimo-v2-tts",
+    "name": "MiMo-V2-TTS",
+    "slug": "xiaomi-mimo-v2-tts",
+    "vendorZh": "小米"
+   },
+   {
+    "id": "xiaomi/mimo-v2.5-tts",
+    "name": "MiMo-V2.5-TTS",
+    "slug": "xiaomi-mimo-v2-5-tts",
+    "vendorZh": "小米"
+   },
+   {
+    "id": "xiaomi/mimo-v2.5-tts-voiceclone",
+    "name": "MiMo-V2.5-TTS-VoiceClone",
+    "slug": "xiaomi-mimo-v2-5-tts-voiceclone",
+    "vendorZh": "小米"
+   },
+   {
+    "id": "xiaomi/mimo-v2.5-tts-voicedesign",
+    "name": "MiMo-V2.5-TTS-VoiceDesign",
+    "slug": "xiaomi-mimo-v2-5-tts-voicedesign",
+    "vendorZh": "小米"
+   }
+  ],
+  "retired": [
+   {
+    "id": "alibaba/qwen-2.5-7b-instruct",
+    "name": "Qwen 2.5 7B Instruct",
+    "slug": "alibaba-qwen-2-5-7b-instruct",
+    "vendorZh": "阿里通义"
+   }
+  ],
+  "newVendors": [
+   {
+    "id": "canopylabs",
+    "nameZh": "Canopylabs"
+   },
+   {
+    "id": "essentialai",
+    "nameZh": "Essentialai"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "openbmb",
+    "vendorZh": "Openbmb",
+    "before": "MiniCPM5-2B",
+    "after": "MiniCPM-V 4.7 35B-A3B",
+    "slug": "openbmb-minicpm-v-4-7-35b-a3b"
+   }
+  ],
+  "champions": [],
+  "date": "2026-10-21T06:33:41.142Z",
+  "summary": "**新模型（19）**\n- Qwen2.5 7B Instruct · 阿里通义\n- Qwen3.5 2B · 阿里通义\n- Qwen3.5 35B-A3B Base · 阿里通义\n- Qwen3.5 4B · 阿里通义\n- Qwen3.5 9B Base · 阿里通义\n- Orpheus Arabic Saudi · Canopylabs\n- Orpheus V1 English · Canopylabs\n- Rnj-1 Instruct · Essentialai\n- Mercury Edit 2 · Inception\n- LFM2 24B A2B · Liquid AI\n- Llama Prompt Guard 2 22M · Meta\n- Llama Prompt Guard 2 86M · Meta\n- …另有 7 条\n**退役（1）**\n- Qwen 2.5 7B Instruct · 阿里通义\n**新厂商（2）**\n- Canopylabs\n- Essentialai\n**门面换代（1）**\n- Openbmb：MiniCPM5-2B → MiniCPM-V 4.7 35B-A3B"
+ },
+ {
   "newModels": [],
   "retired": [],
   "newVendors": [],
