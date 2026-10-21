@@ -2,6 +2,163 @@
  {
   "newModels": [
    {
+    "id": "abacusai/dracarys-llama-3.1-70b-instruct",
+    "name": "Dracarys Llama 3.1 70B Instruct",
+    "slug": "abacusai-dracarys-llama-3-1-70b-instruct",
+    "vendorZh": "Abacusai"
+   },
+   {
+    "id": "alibaba/qwen3.5-0.8b",
+    "name": "Qwen3.5 0.8B",
+    "slug": "alibaba-qwen3-5-0-8b",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "baai/bge-multilingual-gemma2",
+    "name": "BGE Multilingual Gemma2",
+    "slug": "baai-bge-multilingual-gemma2",
+    "vendorZh": "Baai"
+   },
+   {
+    "id": "baidu/ernie-4.5-300b-a47b",
+    "name": "ERNIE 4.5 300B A47B",
+    "slug": "baidu-ernie-4-5-300b-a47b",
+    "vendorZh": "百度文心"
+   },
+   {
+    "id": "black-forest-labs/flux-1-dev",
+    "name": "FLUX.1 [dev]",
+    "slug": "black-forest-labs-flux-1-dev",
+    "vendorZh": "Black Forest Labs"
+   },
+   {
+    "id": "black-forest-labs/flux-1-kontext-dev",
+    "name": "FLUX.1 Kontext [dev]",
+    "slug": "black-forest-labs-flux-1-kontext-dev",
+    "vendorZh": "Black Forest Labs"
+   },
+   {
+    "id": "black-forest-labs/flux-1-schnell",
+    "name": "FLUX.1 [schnell]",
+    "slug": "black-forest-labs-flux-1-schnell",
+    "vendorZh": "Black Forest Labs"
+   },
+   {
+    "id": "bytedance-seed/seed-oss-36b-instruct",
+    "name": "Seed-OSS-36B-Instruct",
+    "slug": "bytedance-seed-seed-oss-36b-instruct",
+    "vendorZh": "字节豆包"
+   },
+   {
+    "id": "google/gemini-2.5-flash-lite-preview-06-17",
+    "name": "Gemini 2.5 Flash-Lite Preview 06-17",
+    "slug": "google-gemini-2-5-flash-lite-preview-06-17",
+    "vendorZh": "谷歌"
+   },
+   {
+    "id": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "name": "Gemini 2.5 Flash-Lite Preview 09-2025",
+    "slug": "google-gemini-2-5-flash-lite-preview-09-2025",
+    "vendorZh": "谷歌"
+   },
+   {
+    "id": "google/gemini-2.5-flash-preview-05-20",
+    "name": "Gemini 2.5 Flash Preview 05-20",
+    "slug": "google-gemini-2-5-flash-preview-05-20",
+    "vendorZh": "谷歌"
+   },
+   {
+    "id": "google/gemma-2-2b-it",
+    "name": "Gemma 2 2B IT",
+    "slug": "google-gemma-2-2b-it",
+    "vendorZh": "谷歌"
+   },
+   {
+    "id": "google/gemma-3n-e2b-it",
+    "name": "Gemma 3n E2B IT",
+    "slug": "google-gemma-3n-e2b-it",
+    "vendorZh": "谷歌"
+   },
+   {
+    "id": "google/gemma-3n-e4b-it",
+    "name": "Gemma 3n E4B IT",
+    "slug": "google-gemma-3n-e4b-it",
+    "vendorZh": "谷歌"
+   },
+   {
+    "id": "meta/llama-3.2-90b-vision-instruct",
+    "name": "Llama-3.2-90B-Vision-Instruct",
+    "slug": "meta-llama-3-2-90b-vision-instruct",
+    "vendorZh": "Meta"
+   },
+   {
+    "id": "microsoft/phi-4-multimodal-instruct",
+    "name": "Phi-4-multimodal-instruct",
+    "slug": "microsoft-phi-4-multimodal-instruct",
+    "vendorZh": "微软"
+   },
+   {
+    "id": "mistral/mistral-7b-instruct-v0.3",
+    "name": "Mistral 7B Instruct v0.3",
+    "slug": "mistral-mistral-7b-instruct-v0-3",
+    "vendorZh": "Mistral"
+   },
+   {
+    "id": "mistral/mixtral-8x7b-instruct-v0.1",
+    "name": "Mixtral 8x7B Instruct v0.1",
+    "slug": "mistral-mixtral-8x7b-instruct-v0-1",
+    "vendorZh": "Mistral"
+   },
+   {
+    "id": "recursive/flint",
+    "name": "Flint",
+    "slug": "recursive-flint",
+    "vendorZh": "Recursive"
+   },
+   {
+    "id": "sarvam/sarvam-m",
+    "name": "Sarvam-M",
+    "slug": "sarvam-sarvam-m",
+    "vendorZh": "Sarvam AI"
+   },
+   {
+    "id": "upstage/solar-10.7b-instruct-v1.0",
+    "name": "SOLAR 10.7B Instruct v1.0",
+    "slug": "upstage-solar-10-7b-instruct-v1-0",
+    "vendorZh": "Upstage"
+   }
+  ],
+  "retired": [],
+  "newVendors": [
+   {
+    "id": "abacusai",
+    "nameZh": "Abacusai"
+   },
+   {
+    "id": "black-forest-labs",
+    "nameZh": "Black Forest Labs"
+   },
+   {
+    "id": "recursive",
+    "nameZh": "Recursive"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "baai",
+    "vendorZh": "Baai",
+    "before": "BGE Reranker V2 M3",
+    "after": "BGE Multilingual Gemma2",
+    "slug": "baai-bge-multilingual-gemma2"
+   }
+  ],
+  "champions": [],
+  "date": "2026-10-21T18:15:54.405Z",
+  "summary": "**新模型（21）**\n- Dracarys Llama 3.1 70B Instruct · Abacusai\n- Qwen3.5 0.8B · 阿里通义\n- BGE Multilingual Gemma2 · Baai\n- ERNIE 4.5 300B A47B · 百度文心\n- FLUX.1 [dev] · Black Forest Labs\n- FLUX.1 Kontext [dev] · Black Forest Labs\n- FLUX.1 [schnell] · Black Forest Labs\n- Seed-OSS-36B-Instruct · 字节豆包\n- Gemini 2.5 Flash-Lite Preview 06-17 · 谷歌\n- Gemini 2.5 Flash-Lite Preview 09-2025 · 谷歌\n- Gemini 2.5 Flash Preview 05-20 · 谷歌\n- Gemma 2 2B IT · 谷歌\n- …另有 9 条\n**新厂商（3）**\n- Abacusai\n- Black Forest Labs\n- Recursive\n**门面换代（1）**\n- Baai：BGE Reranker V2 M3 → BGE Multilingual Gemma2"
+ },
+ {
+  "newModels": [
+   {
     "id": "alibaba/qwen2.5-7b-instruct",
     "name": "Qwen2.5 7B Instruct",
     "slug": "alibaba-qwen2-5-7b-instruct",
