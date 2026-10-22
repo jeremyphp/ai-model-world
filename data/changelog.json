@@ -2,6 +2,35 @@
  {
   "newModels": [
    {
+    "id": "lightonai/lightonocr-3-0.8b",
+    "name": "LightOnOCR-3 0.8B",
+    "slug": "lightonai-lightonocr-3-0-8b",
+    "vendorZh": "Lightonai"
+   }
+  ],
+  "retired": [],
+  "newVendors": [
+   {
+    "id": "lightonai",
+    "nameZh": "Lightonai"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "deepseek",
+    "vendorZh": "深度求索",
+    "before": "DeepSeek V4.1 Flash",
+    "after": "DeepSeek V4.1 Flash 1017",
+    "slug": "deepseek-deepseek-v4-1-flash-1017"
+   }
+  ],
+  "champions": [],
+  "date": "2026-10-22T06:34:24.263Z",
+  "summary": "**新模型（1）**\n- LightOnOCR-3 0.8B · Lightonai\n**新厂商（1）**\n- Lightonai\n**门面换代（1）**\n- 深度求索：DeepSeek V4.1 Flash → DeepSeek V4.1 Flash 1017"
+ },
+ {
+  "newModels": [
+   {
     "id": "abacusai/dracarys-llama-3.1-70b-instruct",
     "name": "Dracarys Llama 3.1 70B Instruct",
     "slug": "abacusai-dracarys-llama-3-1-70b-instruct",
