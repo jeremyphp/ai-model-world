@@ -1,5 +1,43 @@
 [
  {
+  "newModels": [
+   {
+    "id": "moonshotai/kimi-k3.1-pro",
+    "name": "Kimi K3.1 PRO",
+    "slug": "moonshotai-kimi-k3-1-pro",
+    "vendorZh": "月之暗面"
+   },
+   {
+    "id": "moonshotai/kimi-k3.1-pro-highspeed",
+    "name": "Kimi K3.1 PRO Highspeed",
+    "slug": "moonshotai-kimi-k3-1-pro-highspeed",
+    "vendorZh": "月之暗面"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "moonshotai",
+    "vendorZh": "月之暗面",
+    "before": "Kimi K3",
+    "after": "Kimi K3.1 PRO Highspeed",
+    "slug": "moonshotai-kimi-k3-1-pro-highspeed"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "MiniMax-M3.1-Flash",
+    "after": "Kimi K3.1 PRO",
+    "slug": "moonshotai-kimi-k3-1-pro"
+   }
+  ],
+  "date": "2026-10-23T17:57:27.474Z",
+  "summary": "**新模型（2）**\n- Kimi K3.1 PRO · 月之暗面\n- Kimi K3.1 PRO Highspeed · 月之暗面\n**门面换代（1）**\n- 月之暗面：Kimi K3 → Kimi K3.1 PRO Highspeed\n**冠军易主（1）**\n- 最新发布：MiniMax-M3.1-Flash → Kimi K3.1 PRO"
+ },
+ {
   "newModels": [],
   "retired": [
    {
