@@ -1,5 +1,21 @@
 [
  {
+  "newModels": [],
+  "retired": [
+   {
+    "id": "xai/grok-4.1-fast-non-reasoning",
+    "name": "Grok 4.1 Fast NON Reasoning",
+    "slug": "xai-grok-4-1-fast-non-reasoning",
+    "vendorZh": "xAI"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-10-23T06:28:21.979Z",
+  "summary": "**退役（1）**\n- Grok 4.1 Fast NON Reasoning · xAI"
+ },
+ {
   "newModels": [
    {
     "id": "lightonai/lightonocr-3-0.8b",
