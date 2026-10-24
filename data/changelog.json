@@ -2,6 +2,22 @@
  {
   "newModels": [
    {
+    "id": "anthropic/claude-mythos-5-1",
+    "name": "Claude Mythos 5.1",
+    "slug": "anthropic-claude-mythos-5-1",
+    "vendorZh": "Anthropic"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-10-24T06:27:32.336Z",
+  "summary": "**新模型（1）**\n- Claude Mythos 5.1 · Anthropic"
+ },
+ {
+  "newModels": [
+   {
     "id": "moonshotai/kimi-k3.1-pro",
     "name": "Kimi K3.1 PRO",
     "slug": "moonshotai-kimi-k3-1-pro",
