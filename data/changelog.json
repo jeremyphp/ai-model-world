@@ -2,6 +2,60 @@
  {
   "newModels": [
    {
+    "id": "aleph-alpha/kolibri-1",
+    "name": "Kolibri 1",
+    "slug": "aleph-alpha-kolibri-1",
+    "vendorZh": "Aleph Alpha"
+   },
+   {
+    "id": "liquid/lfm-2.5-2.6b",
+    "name": "LFM 2.5 2.6B",
+    "slug": "liquid-lfm-2-5-2-6b",
+    "vendorZh": "Liquid AI"
+   },
+   {
+    "id": "perceptron/perceptron-mk1.5",
+    "name": "Perceptron Mk1.5",
+    "slug": "perceptron-perceptron-mk1-5",
+    "vendorZh": "Perceptron"
+   },
+   {
+    "id": "reflection/beam-free",
+    "name": "Beam Free",
+    "slug": "reflection-beam-free",
+    "vendorZh": "Reflection"
+   }
+  ],
+  "retired": [
+   {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "name": "GPT 3.5 Turbo Instruct",
+    "slug": "openai-gpt-3-5-turbo-instruct",
+    "vendorZh": "OpenAI"
+   }
+  ],
+  "newVendors": [
+   {
+    "id": "aleph-alpha",
+    "nameZh": "Aleph Alpha"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "perceptron",
+    "vendorZh": "Perceptron",
+    "before": "Perceptron Mk1",
+    "after": "Perceptron Mk1.5",
+    "slug": "perceptron-perceptron-mk1-5"
+   }
+  ],
+  "champions": [],
+  "date": "2026-10-25T06:49:43.140Z",
+  "summary": "**新模型（4）**\n- Kolibri 1 · Aleph Alpha\n- LFM 2.5 2.6B · Liquid AI\n- Perceptron Mk1.5 · Perceptron\n- Beam Free · Reflection\n**退役（1）**\n- GPT 3.5 Turbo Instruct · OpenAI\n**新厂商（1）**\n- Aleph Alpha\n**门面换代（1）**\n- Perceptron：Perceptron Mk1 → Perceptron Mk1.5"
+ },
+ {
+  "newModels": [
+   {
     "id": "anthropic/claude-mythos-5-1",
     "name": "Claude Mythos 5.1",
     "slug": "anthropic-claude-mythos-5-1",
