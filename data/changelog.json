@@ -2,6 +2,30 @@
  {
   "newModels": [
    {
+    "id": "openai/gpt-6.1-terra",
+    "name": "GPT-6.1 Terra",
+    "slug": "openai-gpt-6-1-terra",
+    "vendorZh": "OpenAI"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Kimi K3.1 Pro",
+    "after": "GPT-6.1 Terra",
+    "slug": "openai-gpt-6-1-terra"
+   }
+  ],
+  "date": "2026-10-26T19:33:09.239Z",
+  "summary": "**新模型（1）**\n- GPT-6.1 Terra · OpenAI\n**冠军易主（1）**\n- 最新发布：Kimi K3.1 Pro → GPT-6.1 Terra"
+ },
+ {
+  "newModels": [
+   {
     "id": "aleph-alpha/kolibri-1",
     "name": "Kolibri 1",
     "slug": "aleph-alpha-kolibri-1",
