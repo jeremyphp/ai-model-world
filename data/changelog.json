@@ -2,6 +2,29 @@
  {
   "newModels": [
    {
+    "id": "openai/gpt-6.1-terra-pro",
+    "name": "GPT 6.1 Terra PRO",
+    "slug": "openai-gpt-6-1-terra-pro",
+    "vendorZh": "OpenAI"
+   }
+  ],
+  "retired": [
+   {
+    "id": "ibm/granite-4.0-h-micro",
+    "name": "Granite 4.0 H Micro",
+    "slug": "ibm-granite-4-0-h-micro",
+    "vendorZh": "IBM"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-10-27T06:49:44.804Z",
+  "summary": "**新模型（1）**\n- GPT 6.1 Terra PRO · OpenAI\n**退役（1）**\n- Granite 4.0 H Micro · IBM"
+ },
+ {
+  "newModels": [
+   {
     "id": "openai/gpt-6.1-terra",
     "name": "GPT-6.1 Terra",
     "slug": "openai-gpt-6-1-terra",
