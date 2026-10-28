@@ -115,7 +115,7 @@
     "epochParamStrippedMatches": 4,
     "fromModelsDev": 607,
     "models": 728,
-    "pendingDiscoveries": 89,
+    "pendingDiscoveries": 90,
     "promotedDiscoveries": 87,
     "quickPromotedDiscoveries": 25,
     "releaseDateOutliersDropped": 21,
@@ -1965,7 +1965,7 @@
     },
     "liveModels": 694
   },
-  "generatedAt": "2026-10-27T18:57:46.081Z",
+  "generatedAt": "2026-10-28T07:23:39.378Z",
   "livebench": {
     "_note": "LiveBench 官方榜（Apache-2.0，本轮调研里许可证最干净的一份）。release 清单优先从上游仓库的 LIVE_BENCH_RELEASES 常量解析，解析失败才用内置兜底清单——写死清单意味着新 release 不会被自动发现，与「发布后无人维护」的承诺相悖。releasesSkipped 里是题目集换代之前的 release，跨那个断点分数不可比（中位差 27.6 分）。",
     "matchedModels": 131,
@@ -2068,7 +2068,7 @@
       "ok": true
     },
     "litellm": {
-      "note": "4323 条（对话类 3309 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
+      "note": "4332 条（对话类 3318 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
@@ -2076,15 +2076,15 @@
       "ok": true
     },
     "lmarena": {
-      "note": "7/7 个分榜，共 334 条 Arena 分",
+      "note": "7/7 个分榜，共 335 条 Arena 分",
       "ok": true
     },
     "models.dev": {
-      "note": "models.json 607 条；api.json 232 provider / 8944 条；benchmarks[] 1173 条，已拦截 AA 血缘 183 条，非编程口径跳过 609 条",
+      "note": "models.json 607 条；api.json 233 provider / 8947 条；benchmarks[] 1173 条，已拦截 AA 血缘 183 条，非编程口径跳过 609 条",
       "ok": true
     },
     "openrouter": {
-      "note": "463 条；已剔除 artificial_analysis 282 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "note": "464 条；已剔除 artificial_analysis 282 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
     "override": {
@@ -2092,7 +2092,7 @@
       "ok": true
     },
     "vercel-gateway": {
-      "note": "496 条（language 320 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "note": "498 条（language 320 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
   },
