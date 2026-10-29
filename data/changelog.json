@@ -1,5 +1,36 @@
 [
  {
+  "newModels": [],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "smart",
+    "label": "最聪明",
+    "before": "Claude Opus 5.5",
+    "after": "GPT-6 Astra",
+    "slug": "openai-gpt-6-astra"
+   },
+   {
+    "key": "east",
+    "label": "国内第一",
+    "before": "Kimi K3",
+    "after": "DeepSeek V4.1 Flash 1017",
+    "slug": "deepseek-deepseek-v4-1-flash-1017"
+   },
+   {
+    "key": "open",
+    "label": "开源第一",
+    "before": "Kimi K3",
+    "after": "DeepSeek V4.1 Flash 1017",
+    "slug": "deepseek-deepseek-v4-1-flash-1017"
+   }
+  ],
+  "date": "2026-10-29T19:12:26.499Z",
+  "summary": "**冠军易主（3）**\n- 最聪明：Claude Opus 5.5 → GPT-6 Astra\n- 国内第一：Kimi K3 → DeepSeek V4.1 Flash 1017\n- 开源第一：Kimi K3 → DeepSeek V4.1 Flash 1017"
+ },
+ {
   "newModels": [
    {
     "id": "openai/gpt-6.1-terra-pro",
