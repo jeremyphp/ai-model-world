@@ -1,5 +1,37 @@
 [
  {
+  "newModels": [
+   {
+    "id": "inclusionai/ling-3.1-flash-1019",
+    "name": "Ling 3.1 Flash 1019",
+    "slug": "inclusionai-ling-3-1-flash-1019",
+    "vendorZh": "蚂蚁百灵"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "inclusionai",
+    "vendorZh": "蚂蚁百灵",
+    "before": "Ling 3.1 Flash",
+    "after": "Ling 3.1 Flash 1019",
+    "slug": "inclusionai-ling-3-1-flash-1019"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "GPT-6.1 Terra",
+    "after": "Ling 3.1 Flash 1019",
+    "slug": "inclusionai-ling-3-1-flash-1019"
+   }
+  ],
+  "date": "2026-10-30T18:50:36.030Z",
+  "summary": "**新模型（1）**\n- Ling 3.1 Flash 1019 · 蚂蚁百灵\n**门面换代（1）**\n- 蚂蚁百灵：Ling 3.1 Flash → Ling 3.1 Flash 1019\n**冠军易主（1）**\n- 最新发布：GPT-6.1 Terra → Ling 3.1 Flash 1019"
+ },
+ {
   "newModels": [],
   "retired": [],
   "newVendors": [],
