@@ -2,6 +2,44 @@
  {
   "newModels": [
    {
+    "id": "meituan/longcat-2.5",
+    "name": "Longcat 2.5",
+    "slug": "meituan-longcat-2-5",
+    "vendorZh": "美团龙猫"
+   },
+   {
+    "id": "zhipuai/glm-5.3-flashx-legal",
+    "name": "GLM 5.3 Flashx Legal",
+    "slug": "zhipuai-glm-5-3-flashx-legal",
+    "vendorZh": "智谱"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "meituan",
+    "vendorZh": "美团龙猫",
+    "before": "LongCat-2.5-Preview",
+    "after": "Longcat 2.5",
+    "slug": "meituan-longcat-2-5"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Ling 3.1 Flash 1019",
+    "after": "Longcat 2.5",
+    "slug": "meituan-longcat-2-5"
+   }
+  ],
+  "date": "2026-11-02T22:28:32.207Z",
+  "summary": "**新模型（2）**\n- Longcat 2.5 · 美团龙猫\n- GLM 5.3 Flashx Legal · 智谱\n**门面换代（1）**\n- 美团龙猫：LongCat-2.5-Preview → Longcat 2.5\n**冠军易主（1）**\n- 最新发布：Ling 3.1 Flash 1019 → Longcat 2.5"
+ },
+ {
+  "newModels": [
+   {
     "id": "inclusionai/ling-3.1-flash-1019",
     "name": "Ling 3.1 Flash 1019",
     "slug": "inclusionai-ling-3-1-flash-1019",
