@@ -255,7 +255,7 @@
     {
       "id": "chess_puzzles",
       "inEci": true,
-      "models": 107,
+      "models": 108,
       "randomBaseline": 4.96,
       "releaseDate": "2025-12-10",
       "scoreCeiling": 100,
@@ -963,7 +963,7 @@
     {
       "id": "spireclimb",
       "inEci": true,
-      "models": 7,
+      "models": 8,
       "randomBaseline": 0,
       "releaseDate": "2026-10-14",
       "scoreCeiling": 100,
@@ -975,7 +975,7 @@
     {
       "id": "spireclimb_sts1_a20_heart",
       "inEci": false,
-      "models": 7,
+      "models": 8,
       "randomBaseline": null,
       "releaseDate": null,
       "scoreCeiling": null,
@@ -987,7 +987,7 @@
     {
       "id": "spireclimb_sts2_a10",
       "inEci": false,
-      "models": 7,
+      "models": 8,
       "randomBaseline": null,
       "releaseDate": null,
       "scoreCeiling": null,
@@ -1261,7 +1261,7 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-11-04T08:00:01.020Z",
+  "generatedAt": "2026-11-04T20:33:00.483Z",
   "models": [
     {
       "benchmarks": {
@@ -4174,7 +4174,7 @@
         "webdev_arena_elo": null
       },
       "capabilities": {
-        "promptCaching": true,
+        "promptCaching": false,
         "reasoning": null,
         "structuredOutput": null,
         "toolCall": null
@@ -4194,7 +4194,7 @@
       "id": "alibaba/qwen3-235b-a22b-2507",
       "knowledgeCutoff": null,
       "license": null,
-      "maxOutput": 117964,
+      "maxOutput": 16384,
       "modalities": {
         "input": [
           "text"
@@ -4211,9 +4211,9 @@
         "totalB": 235
       },
       "pricing": {
-        "cachedInputPerMTok": 0.05,
-        "inputPerMTok": 0.14,
-        "outputPerMTok": 0.8
+        "cachedInputPerMTok": null,
+        "inputPerMTok": 0.09,
+        "outputPerMTok": 0.55
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -4229,7 +4229,6 @@
         "name": "derived",
         "params.activeB": "derived",
         "params.totalB": "derived",
-        "pricing.cachedInputPerMTok": "openrouter",
         "pricing.inputPerMTok": "openrouter",
         "pricing.outputPerMTok": "openrouter",
         "releaseDate": "epoch.ai",
@@ -9790,8 +9789,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.065,
-        "outputPerMTok": 0.26
+        "inputPerMTok": 0.09,
+        "outputPerMTok": 0.368
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -9805,8 +9804,8 @@
         "modalities": "openrouter",
         "name": "derived",
         "params.sizeTier": "derived",
-        "pricing.inputPerMTok": "openrouter",
-        "pricing.outputPerMTok": "openrouter",
+        "pricing.inputPerMTok": "litellm",
+        "pricing.outputPerMTok": "litellm",
         "releaseDate": "epoch.ai",
         "releaseDatePrecision": "epoch.ai",
         "scores": "derived",
@@ -10046,7 +10045,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 8,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -10215,8 +10214,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.26,
-        "outputPerMTok": 1.56
+        "inputPerMTok": 0.36,
+        "outputPerMTok": 2.21
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -10230,8 +10229,8 @@
         "modalities": "openrouter",
         "name": "derived",
         "params.sizeTier": "derived",
-        "pricing.inputPerMTok": "openrouter",
-        "pricing.outputPerMTok": "openrouter",
+        "pricing.inputPerMTok": "litellm",
+        "pricing.outputPerMTok": "litellm",
         "releaseDate": "epoch.ai",
         "releaseDatePrecision": "epoch.ai",
         "scores": "derived",
@@ -10260,7 +10259,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 8,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -10429,8 +10428,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.3,
-        "outputPerMTok": 1.8
+        "inputPerMTok": 0.36,
+        "outputPerMTok": 2.21
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -10444,8 +10443,8 @@
         "modalities": "openrouter",
         "name": "derived",
         "params.sizeTier": "derived",
-        "pricing.inputPerMTok": "openrouter",
-        "pricing.outputPerMTok": "openrouter",
+        "pricing.inputPerMTok": "litellm",
+        "pricing.outputPerMTok": "litellm",
         "releaseDate": "epoch.ai",
         "releaseDatePrecision": "epoch.ai",
         "scores": "derived",
@@ -10474,7 +10473,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 8,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -11548,7 +11547,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 14,
+          "score": 16,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -11982,7 +11981,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 26,
+          "score": 27,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -27563,6 +27562,14 @@
         },
         {
           "attribution": "third-party",
+          "league": "chess_puzzles",
+          "score": 5,
+          "source": "epoch.ai",
+          "sourceUrl": null,
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
           "league": "gpqa_diamond",
           "score": 77.59,
           "source": "epoch.ai",
@@ -37700,8 +37707,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.006,
-        "inputPerMTok": 0.245938,
-        "outputPerMTok": 1.19015
+        "inputPerMTok": 0.24,
+        "outputPerMTok": 1.115
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -42085,7 +42092,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 39,
+          "score": 40,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -42493,7 +42500,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 39,
+          "score": 40,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -50067,7 +50074,7 @@
       "pricing": {
         "cachedInputPerMTok": 0.015,
         "inputPerMTok": 0.06,
-        "outputPerMTok": 0.15
+        "outputPerMTok": 0.25
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -58763,7 +58770,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 13,
+          "score": 17,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -60607,8 +60614,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.33537,
-        "outputPerMTok": 0.44716
+        "inputPerMTok": 0.33801,
+        "outputPerMTok": 0.45068
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -71209,7 +71216,7 @@
         "totalB": null
       },
       "pricing": {
-        "cachedInputPerMTok": 0.0125,
+        "cachedInputPerMTok": 0.01,
         "inputPerMTok": 0.05,
         "outputPerMTok": 0.2
       },
@@ -73414,7 +73421,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 3,
+          "score": 11,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -74193,7 +74200,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 6,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -74547,7 +74554,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 6,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -74902,7 +74909,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 6,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -75265,7 +75272,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 6,
+          "score": 9,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -87640,6 +87647,30 @@
         },
         {
           "attribution": "third-party",
+          "league": "spireclimb",
+          "score": 19.83,
+          "source": "epoch.ai",
+          "sourceUrl": null,
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "spireclimb_sts1_a20_heart",
+          "score": 5,
+          "source": "epoch.ai",
+          "sourceUrl": null,
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "spireclimb_sts2_a10",
+          "score": 34.67,
+          "source": "epoch.ai",
+          "sourceUrl": null,
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
           "league": "vending_bench_2",
           "score": 9107.46,
           "source": "epoch.ai",
@@ -88477,7 +88508,7 @@
         "totalB": 114.66
       },
       "pricing": {
-        "cachedInputPerMTok": 0.075,
+        "cachedInputPerMTok": 0.066,
         "inputPerMTok": 0.15,
         "outputPerMTok": 0.6
       },
@@ -88725,7 +88756,7 @@
         "totalB": 19.11
       },
       "pricing": {
-        "cachedInputPerMTok": 0.0275,
+        "cachedInputPerMTok": 0.02,
         "inputPerMTok": 0.055,
         "outputPerMTok": 0.2
       },
@@ -95425,9 +95456,9 @@
       },
       "capabilities": {
         "promptCaching": true,
-        "reasoning": null,
+        "reasoning": true,
         "structuredOutput": null,
-        "toolCall": null
+        "toolCall": true
       },
       "coding": [],
       "contextWindow": 1048576,
@@ -95445,8 +95476,8 @@
           "text"
         ]
       },
-      "name": "HY4",
-      "openWeights": null,
+      "name": "Hy4",
+      "openWeights": false,
       "params": {
         "activeB": null,
         "confidence": "estimated",
@@ -95455,20 +95486,23 @@
         "totalB": null
       },
       "pricing": {
-        "cachedInputPerMTok": 0.021,
-        "inputPerMTok": 0.417,
-        "outputPerMTok": 1.2505
+        "cachedInputPerMTok": 0.042,
+        "inputPerMTok": 0.834,
+        "outputPerMTok": 2.501
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
-        "contextWindow": "openrouter",
-        "maxOutput": "openrouter",
-        "modalities": "openrouter",
-        "name": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "contextWindow": "models.dev",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
         "params.sizeTier": "derived",
-        "pricing.cachedInputPerMTok": "openrouter",
-        "pricing.inputPerMTok": "openrouter",
-        "pricing.outputPerMTok": "openrouter",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
         "releaseDate": "vercel-gateway",
         "releaseDatePrecision": "vercel-gateway",
         "scores": "derived",
@@ -106884,43 +106918,43 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
       "note": "ZIP 92 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 80 个；训练算力 334 行；去重后 426 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
       "note": "请求 240 个开源模型，成功 236，失败 4",
       "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
-      "note": "4525 条（对话类 3483 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
+      "note": "4623 条（对话类 3577 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
       "note": "Apache-2.0 / DATASHEET 明文「no copyrights on the data」。采用 6 个同期 release（2026-06-25, 2026-01-08, 2025-12-23, 2025-11-25, 2025-05-30, 2025-04-25）；跳过题目集换代前的 5 个（2024-06-24, 2024-07-26, 2024-08-31, 2024-11-25, 2025-04-02）——实测跨这个断点同一模型的 Coding 分中位差 27.6 分，不可同池。",
       "ok": true
     },
     "lmarena": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
       "note": "7/7 个分榜，共 335 条 Arena 分",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
-      "note": "models.json 607 条；api.json 235 provider / 8928 条；benchmarks[] 1173 条，已拦截 AA 血缘 183 条，非编程口径跳过 609 条",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
+      "note": "models.json 608 条；api.json 235 provider / 8940 条；benchmarks[] 1173 条，已拦截 AA 血缘 183 条，非编程口径跳过 609 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
-      "note": "455 条；已剔除 artificial_analysis 194 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
+      "note": "454 条；已剔除 artificial_analysis 192 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
     "override": {
@@ -106929,7 +106963,7 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-11-04T08:00:01.020Z",
+      "fetchedAt": "2026-11-04T20:33:00.483Z",
       "note": "498 条（language 320 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
