@@ -2,6 +2,30 @@
  {
   "newModels": [
    {
+    "id": "tencent/hy4",
+    "name": "HY4",
+    "slug": "tencent-hy4",
+    "vendorZh": "腾讯混元"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Longcat 2.5",
+    "after": "HY4",
+    "slug": "tencent-hy4"
+   }
+  ],
+  "date": "2026-11-04T08:00:01.020Z",
+  "summary": "**新模型（1）**\n- HY4 · 腾讯混元\n**冠军易主（1）**\n- 最新发布：Longcat 2.5 → HY4"
+ },
+ {
+  "newModels": [
+   {
     "id": "meituan/longcat-2.5",
     "name": "Longcat 2.5",
     "slug": "meituan-longcat-2-5",
