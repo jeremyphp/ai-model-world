@@ -2,6 +2,41 @@
  {
   "newModels": [
    {
+    "id": "inclusionai/ling-3.0-tiny",
+    "name": "Ling 3.0 Tiny",
+    "slug": "inclusionai-ling-3-0-tiny",
+    "vendorZh": "蚂蚁百灵"
+   },
+   {
+    "id": "ricursiveai/ripple-65b-preview",
+    "name": "Ripple 65B Preview",
+    "slug": "ricursiveai-ripple-65b-preview",
+    "vendorZh": "Ricursiveai"
+   }
+  ],
+  "retired": [],
+  "newVendors": [
+   {
+    "id": "ricursiveai",
+    "nameZh": "Ricursiveai"
+   }
+  ],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "cheap",
+    "label": "最便宜",
+    "before": "Ministral 3B",
+    "after": "Llama-3.1-8B-Instruct",
+    "slug": "meta-llama-3-1-8b-instruct"
+   }
+  ],
+  "date": "2026-11-05T08:30:24.454Z",
+  "summary": "**新模型（2）**\n- Ling 3.0 Tiny · 蚂蚁百灵\n- Ripple 65B Preview · Ricursiveai\n**新厂商（1）**\n- Ricursiveai\n**冠军易主（1）**\n- 最便宜：Ministral 3B → Llama-3.1-8B-Instruct"
+ },
+ {
+  "newModels": [
+   {
     "id": "tencent/hy4",
     "name": "HY4",
     "slug": "tencent-hy4",
