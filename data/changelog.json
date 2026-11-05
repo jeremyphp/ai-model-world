@@ -2,6 +2,45 @@
  {
   "newModels": [
    {
+    "id": "google/gemini-omni-1.2-flash",
+    "name": "Gemini Omni 1.2 Flash",
+    "slug": "google-gemini-omni-1-2-flash",
+    "vendorZh": "谷歌"
+   }
+  ],
+  "retired": [
+   {
+    "id": "minimax/minimax-01",
+    "name": "Minimax 01",
+    "slug": "minimax-minimax-01",
+    "vendorZh": "MiniMax"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "google",
+    "vendorZh": "谷歌",
+    "before": "Gemini 4 Argon",
+    "after": "Gemini Omni 1.2 Flash",
+    "slug": "google-gemini-omni-1-2-flash"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Hy4",
+    "after": "Gemini Omni 1.2 Flash",
+    "slug": "google-gemini-omni-1-2-flash"
+   }
+  ],
+  "date": "2026-11-05T20:49:40.049Z",
+  "summary": "**新模型（1）**\n- Gemini Omni 1.2 Flash · 谷歌\n**退役（1）**\n- Minimax 01 · MiniMax\n**门面换代（1）**\n- 谷歌：Gemini 4 Argon → Gemini Omni 1.2 Flash\n**冠军易主（1）**\n- 最新发布：Hy4 → Gemini Omni 1.2 Flash"
+ },
+ {
+  "newModels": [
+   {
     "id": "inclusionai/ling-3.0-tiny",
     "name": "Ling 3.0 Tiny",
     "slug": "inclusionai-ling-3-0-tiny",
