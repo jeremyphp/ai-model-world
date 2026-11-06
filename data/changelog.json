@@ -2,6 +2,38 @@
  {
   "newModels": [
    {
+    "id": "deepseek/deepseek-v4.1-flash-1017-ultrafast",
+    "name": "Deepseek V4.1 Flash 1017 Ultrafast",
+    "slug": "deepseek-deepseek-v4-1-flash-1017-ultrafast",
+    "vendorZh": "深度求索"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "deepseek",
+    "vendorZh": "深度求索",
+    "before": "DeepSeek V4.1 Flash 1017",
+    "after": "Deepseek V4.1 Flash 1017 Ultrafast",
+    "slug": "deepseek-deepseek-v4-1-flash-1017-ultrafast"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Gemini Omni 1.2 Flash",
+    "after": "Deepseek V4.1 Flash 1017 Ultrafast",
+    "slug": "deepseek-deepseek-v4-1-flash-1017-ultrafast"
+   }
+  ],
+  "date": "2026-11-06T20:05:14.216Z",
+  "summary": "**新模型（1）**\n- Deepseek V4.1 Flash 1017 Ultrafast · 深度求索\n**门面换代（1）**\n- 深度求索：DeepSeek V4.1 Flash 1017 → Deepseek V4.1 Flash 1017 Ultrafast\n**冠军易主（1）**\n- 最新发布：Gemini Omni 1.2 Flash → Deepseek V4.1 Flash 1017 Ultrafast"
+ },
+ {
+  "newModels": [
+   {
     "id": "google/gemini-omni-1.2-flash",
     "name": "Gemini Omni 1.2 Flash",
     "slug": "google-gemini-omni-1-2-flash",
