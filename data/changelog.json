@@ -2,6 +2,36 @@
  {
   "newModels": [
    {
+    "id": "liquid/lfm-3-1.7b",
+    "name": "LFM 3 1.7B",
+    "slug": "liquid-lfm-3-1-7b",
+    "vendorZh": "Liquid AI"
+   },
+   {
+    "id": "thinkingmachines/inkling-2-small",
+    "name": "Inkling 2 Small",
+    "slug": "thinkingmachines-inkling-2-small",
+    "vendorZh": "Thinking Machines"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "liquid",
+    "vendorZh": "Liquid AI",
+    "before": "LFM 2.5 24B A2B",
+    "after": "LFM 3 1.7B",
+    "slug": "liquid-lfm-3-1-7b"
+   }
+  ],
+  "champions": [],
+  "date": "2026-11-07T07:45:56.398Z",
+  "summary": "**新模型（2）**\n- LFM 3 1.7B · Liquid AI\n- Inkling 2 Small · Thinking Machines\n**门面换代（1）**\n- Liquid AI：LFM 2.5 24B A2B → LFM 3 1.7B"
+ },
+ {
+  "newModels": [
+   {
     "id": "deepseek/deepseek-v4.1-flash-1017-ultrafast",
     "name": "Deepseek V4.1 Flash 1017 Ultrafast",
     "slug": "deepseek-deepseek-v4-1-flash-1017-ultrafast",
