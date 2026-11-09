@@ -2,6 +2,85 @@
  {
   "newModels": [
    {
+    "id": "anthropic/claude-fable-5-2",
+    "name": "Claude Fable 5.2",
+    "slug": "anthropic-claude-fable-5-2",
+    "vendorZh": "Anthropic"
+   },
+   {
+    "id": "anthropic/claude-fable-5.2-fast",
+    "name": "Claude Fable 5.2 Fast",
+    "slug": "anthropic-claude-fable-5-2-fast",
+    "vendorZh": "Anthropic"
+   },
+   {
+    "id": "meta/muse-ember",
+    "name": "Muse Ember",
+    "slug": "meta-muse-ember",
+    "vendorZh": "Meta"
+   }
+  ],
+  "retired": [
+   {
+    "id": "minimax/minimax-m1",
+    "name": "Minimax M1",
+    "slug": "minimax-minimax-m1",
+    "vendorZh": "MiniMax"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "moonshotai",
+    "vendorZh": "月之暗面",
+    "before": "Kimi K3.1 PRO Highspeed",
+    "after": "Kimi K3.1 Pro",
+    "slug": "moonshotai-kimi-k3-1-pro"
+   },
+   {
+    "vendorId": "anthropic",
+    "vendorZh": "Anthropic",
+    "before": "Claude Opus 5.5",
+    "after": "Claude Fable 5.2",
+    "slug": "anthropic-claude-fable-5-2"
+   }
+  ],
+  "champions": [
+   {
+    "key": "smart",
+    "label": "最聪明",
+    "before": "GPT-6 Astra",
+    "after": "Claude Fable 5.2",
+    "slug": "anthropic-claude-fable-5-2"
+   },
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Deepseek V4.1 Flash 1017 Ultrafast",
+    "after": "Claude Fable 5.2",
+    "slug": "anthropic-claude-fable-5-2"
+   },
+   {
+    "key": "east",
+    "label": "国内第一",
+    "before": "DeepSeek V4.1 Flash 1017",
+    "after": "Kimi K3.1 Pro",
+    "slug": "moonshotai-kimi-k3-1-pro"
+   },
+   {
+    "key": "open",
+    "label": "开源第一",
+    "before": "DeepSeek V4.1 Flash 1017",
+    "after": "Kimi K3.1 Pro",
+    "slug": "moonshotai-kimi-k3-1-pro"
+   }
+  ],
+  "date": "2026-11-09T23:09:30.011Z",
+  "summary": "**新模型（3）**\n- Claude Fable 5.2 · Anthropic\n- Claude Fable 5.2 Fast · Anthropic\n- Muse Ember · Meta\n**退役（1）**\n- Minimax M1 · MiniMax\n**门面换代（2）**\n- 月之暗面：Kimi K3.1 PRO Highspeed → Kimi K3.1 Pro\n- Anthropic：Claude Opus 5.5 → Claude Fable 5.2\n**冠军易主（4）**\n- 最聪明：GPT-6 Astra → Claude Fable 5.2\n- 最新发布：Deepseek V4.1 Flash 1017 Ultrafast → Claude Fable 5.2\n- 国内第一：DeepSeek V4.1 Flash 1017 → Kimi K3.1 Pro\n- 开源第一：DeepSeek V4.1 Flash 1017 → Kimi K3.1 Pro"
+ },
+ {
+  "newModels": [
+   {
     "id": "liquid/lfm-3-1.7b",
     "name": "LFM 3 1.7B",
     "slug": "liquid-lfm-3-1-7b",
