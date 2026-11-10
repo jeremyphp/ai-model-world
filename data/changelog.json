@@ -2,6 +2,22 @@
  {
   "newModels": [
    {
+    "id": "meta/muse-ember-1.0",
+    "name": "Muse Ember",
+    "slug": "meta-muse-ember-1-0",
+    "vendorZh": "Meta"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-10T08:50:02.211Z",
+  "summary": "**新模型（1）**\n- Muse Ember · Meta"
+ },
+ {
+  "newModels": [
+   {
     "id": "anthropic/claude-fable-5-2",
     "name": "Claude Fable 5.2",
     "slug": "anthropic-claude-fable-5-2",
