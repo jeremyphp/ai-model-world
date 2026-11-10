@@ -2,6 +2,57 @@
  {
   "newModels": [
    {
+    "id": "baidu/ernie-5.5-flash-preview",
+    "name": "Ernie 5.5 Flash Preview",
+    "slug": "baidu-ernie-5-5-flash-preview",
+    "vendorZh": "百度文心"
+   },
+   {
+    "id": "baidu/ernie-light-dt-1.0-intl",
+    "name": "Ernie Light DT 1.0 Intl",
+    "slug": "baidu-ernie-light-dt-1-0-intl",
+    "vendorZh": "百度文心"
+   },
+   {
+    "id": "google/gemini-4-carbon",
+    "name": "Gemini 4 Carbon",
+    "slug": "google-gemini-4-carbon",
+    "vendorZh": "谷歌"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "baidu",
+    "vendorZh": "百度文心",
+    "before": "CoBuddy",
+    "after": "Ernie Light DT 1.0 Intl",
+    "slug": "baidu-ernie-light-dt-1-0-intl"
+   },
+   {
+    "vendorId": "google",
+    "vendorZh": "谷歌",
+    "before": "Gemini Omni 1.2 Flash",
+    "after": "Gemini 4 Carbon",
+    "slug": "google-gemini-4-carbon"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Claude Fable 5.2",
+    "after": "Ernie 5.5 Flash Preview",
+    "slug": "baidu-ernie-5-5-flash-preview"
+   }
+  ],
+  "date": "2026-11-10T20:36:32.369Z",
+  "summary": "**新模型（3）**\n- Ernie 5.5 Flash Preview · 百度文心\n- Ernie Light DT 1.0 Intl · 百度文心\n- Gemini 4 Carbon · 谷歌\n**门面换代（2）**\n- 百度文心：CoBuddy → Ernie Light DT 1.0 Intl\n- 谷歌：Gemini Omni 1.2 Flash → Gemini 4 Carbon\n**冠军易主（1）**\n- 最新发布：Claude Fable 5.2 → Ernie 5.5 Flash Preview"
+ },
+ {
+  "newModels": [
+   {
     "id": "meta/muse-ember-1.0",
     "name": "Muse Ember",
     "slug": "meta-muse-ember-1-0",
