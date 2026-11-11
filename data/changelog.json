@@ -1,5 +1,37 @@
 [
  {
+  "newModels": [],
+  "retired": [
+   {
+    "id": "baidu/ernie-5.5-flash-preview",
+    "name": "Ernie 5.5 Flash Preview",
+    "slug": "baidu-ernie-5-5-flash-preview",
+    "vendorZh": "百度文心"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "google",
+    "vendorZh": "谷歌",
+    "before": "Gemini 4 Carbon",
+    "after": "Gemini Omni 1.2 Flash",
+    "slug": "google-gemini-omni-1-2-flash"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Ernie 5.5 Flash Preview",
+    "after": "Ernie Light DT 1.0 Intl",
+    "slug": "baidu-ernie-light-dt-1-0-intl"
+   }
+  ],
+  "date": "2026-11-11T08:23:09.816Z",
+  "summary": "**退役（1）**\n- Ernie 5.5 Flash Preview · 百度文心\n**门面换代（1）**\n- 谷歌：Gemini 4 Carbon → Gemini Omni 1.2 Flash\n**冠军易主（1）**\n- 最新发布：Ernie 5.5 Flash Preview → Ernie Light DT 1.0 Intl"
+ },
+ {
   "newModels": [
    {
     "id": "baidu/ernie-5.5-flash-preview",
