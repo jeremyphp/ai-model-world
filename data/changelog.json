@@ -1,5 +1,37 @@
 [
  {
+  "newModels": [
+   {
+    "id": "google/gemini-4-hydrogen",
+    "name": "Gemini 4 Hydrogen",
+    "slug": "google-gemini-4-hydrogen",
+    "vendorZh": "谷歌"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "google",
+    "vendorZh": "谷歌",
+    "before": "Gemini Omni 1.2 Flash",
+    "after": "Gemini 4 Hydrogen",
+    "slug": "google-gemini-4-hydrogen"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Ernie Light DT 1.0 Intl",
+    "after": "Gemini 4 Hydrogen",
+    "slug": "google-gemini-4-hydrogen"
+   }
+  ],
+  "date": "2026-11-12T21:06:21.185Z",
+  "summary": "**新模型（1）**\n- Gemini 4 Hydrogen · 谷歌\n**门面换代（1）**\n- 谷歌：Gemini Omni 1.2 Flash → Gemini 4 Hydrogen\n**冠军易主（1）**\n- 最新发布：Ernie Light DT 1.0 Intl → Gemini 4 Hydrogen"
+ },
+ {
   "newModels": [],
   "retired": [
    {
