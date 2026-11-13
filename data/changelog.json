@@ -1,5 +1,21 @@
 [
  {
+  "newModels": [],
+  "retired": [
+   {
+    "id": "liquid/lfm-2.5-2.6b",
+    "name": "LFM 2.5 2.6B",
+    "slug": "liquid-lfm-2-5-2-6b",
+    "vendorZh": "Liquid AI"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-13T20:39:24.716Z",
+  "summary": "**退役（1）**\n- LFM 2.5 2.6B · Liquid AI"
+ },
+ {
   "newModels": [
    {
     "id": "google/gemini-4-hydrogen",
