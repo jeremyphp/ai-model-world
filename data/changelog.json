@@ -1,5 +1,27 @@
 [
  {
+  "newModels": [],
+  "retired": [
+   {
+    "id": "alibaba/qwen3-vl-30b-a3b-thinking",
+    "name": "Qwen3 VL 30B A3B Thinking",
+    "slug": "alibaba-qwen3-vl-30b-a3b-thinking",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "tencent/hunyuan-a13b-instruct",
+    "name": "Hunyuan A13b Instruct",
+    "slug": "tencent-hunyuan-a13b-instruct",
+    "vendorZh": "腾讯混元"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-15T19:28:17.608Z",
+  "summary": "**退役（2）**\n- Qwen3 VL 30B A3B Thinking · 阿里通义\n- Hunyuan A13b Instruct · 腾讯混元"
+ },
+ {
   "newModels": [
    {
     "id": "allenai/olmocr-2-7b",
