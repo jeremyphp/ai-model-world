@@ -1,5 +1,153 @@
 [
  {
+  "newModels": [
+   {
+    "id": "allenai/olmocr-2-7b",
+    "name": "olmOCR 2 7B",
+    "slug": "allenai-olmocr-2-7b",
+    "vendorZh": "Allen AI"
+   },
+   {
+    "id": "bytedance-seed/seed-2.1-lite",
+    "name": "Seed 2.1 Lite",
+    "slug": "bytedance-seed-seed-2-1-lite",
+    "vendorZh": "字节豆包"
+   },
+   {
+    "id": "deepreinforce/ornith-1.5-122b",
+    "name": "Ornith 1.5 122B",
+    "slug": "deepreinforce-ornith-1-5-122b",
+    "vendorZh": "Deep Reinforce"
+   },
+   {
+    "id": "huawei/openpangu-2.0-flash",
+    "name": "openPangu 2.0 Flash",
+    "slug": "huawei-openpangu-2-0-flash",
+    "vendorZh": "Huawei"
+   },
+   {
+    "id": "huawei/openpangu-2.0-pro",
+    "name": "openPangu 2.0 Pro",
+    "slug": "huawei-openpangu-2-0-pro",
+    "vendorZh": "Huawei"
+   },
+   {
+    "id": "inclusionai/ling-3.2-flash",
+    "name": "Ling 3.2 Flash",
+    "slug": "inclusionai-ling-3-2-flash",
+    "vendorZh": "蚂蚁百灵"
+   },
+   {
+    "id": "lightonai/lightonocr-2-1b",
+    "name": "LightOnOCR 2 1B",
+    "slug": "lightonai-lightonocr-2-1b",
+    "vendorZh": "Lightonai"
+   },
+   {
+    "id": "meragpt/restyler-1",
+    "name": "Restyler 1",
+    "slug": "meragpt-restyler-1",
+    "vendorZh": "meraGPT"
+   },
+   {
+    "id": "openai/gpt-6-cyber",
+    "name": "GPT-6 Cyber",
+    "slug": "openai-gpt-6-cyber",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "opendatalab/mineru2.5-2509-1.2b",
+    "name": "MinerU2.5 2509 1.2B",
+    "slug": "opendatalab-mineru2-5-2509-1-2b",
+    "vendorZh": "Opendatalab"
+   },
+   {
+    "id": "swiss-ai/apertus-v1.5-70b",
+    "name": "Apertus 1.5 70B",
+    "slug": "swiss-ai-apertus-v1-5-70b",
+    "vendorZh": "Swiss AI"
+   },
+   {
+    "id": "swiss-ai/apertus-v1.5-8b",
+    "name": "Apertus v1.5 8B",
+    "slug": "swiss-ai-apertus-v1-5-8b",
+    "vendorZh": "Swiss AI"
+   },
+   {
+    "id": "unbiased/pareto-26.10",
+    "name": "Pareto 26.10",
+    "slug": "unbiased-pareto-26-10",
+    "vendorZh": "Pareto by Unbiased"
+   }
+  ],
+  "retired": [
+   {
+    "id": "inception/mercury-coder-small",
+    "name": "Mercury Coder Small",
+    "slug": "inception-mercury-coder-small",
+    "vendorZh": "Inception"
+   }
+  ],
+  "newVendors": [
+   {
+    "id": "allenai",
+    "nameZh": "Allen AI"
+   },
+   {
+    "id": "huawei",
+    "nameZh": "Huawei"
+   },
+   {
+    "id": "meragpt",
+    "nameZh": "meraGPT"
+   },
+   {
+    "id": "opendatalab",
+    "nameZh": "Opendatalab"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "inclusionai",
+    "vendorZh": "蚂蚁百灵",
+    "before": "Ling 3.1 Flash 1019",
+    "after": "Ling 3.2 Flash",
+    "slug": "inclusionai-ling-3-2-flash"
+   },
+   {
+    "vendorId": "deepreinforce",
+    "vendorZh": "Deep Reinforce",
+    "before": "Ornith 1.5 35B A3B",
+    "after": "Ornith 1.5 122B",
+    "slug": "deepreinforce-ornith-1-5-122b"
+   },
+   {
+    "vendorId": "openai",
+    "vendorZh": "OpenAI",
+    "before": "GPT-6 Astra",
+    "after": "GPT-6 Cyber",
+    "slug": "openai-gpt-6-cyber"
+   },
+   {
+    "vendorId": "unbiased",
+    "vendorZh": "Pareto by Unbiased",
+    "before": "Pareto",
+    "after": "Pareto 26.10",
+    "slug": "unbiased-pareto-26-10"
+   },
+   {
+    "vendorId": "swiss-ai",
+    "vendorZh": "Swiss AI",
+    "before": "Apertus 70B",
+    "after": "Apertus v1.5 8B",
+    "slug": "swiss-ai-apertus-v1-5-8b"
+   }
+  ],
+  "champions": [],
+  "date": "2026-11-15T08:26:58.224Z",
+  "summary": "**新模型（13）**\n- olmOCR 2 7B · Allen AI\n- Seed 2.1 Lite · 字节豆包\n- Ornith 1.5 122B · Deep Reinforce\n- openPangu 2.0 Flash · Huawei\n- openPangu 2.0 Pro · Huawei\n- Ling 3.2 Flash · 蚂蚁百灵\n- LightOnOCR 2 1B · Lightonai\n- Restyler 1 · meraGPT\n- GPT-6 Cyber · OpenAI\n- MinerU2.5 2509 1.2B · Opendatalab\n- Apertus 1.5 70B · Swiss AI\n- Apertus v1.5 8B · Swiss AI\n- …另有 1 条\n**退役（1）**\n- Mercury Coder Small · Inception\n**新厂商（4）**\n- Allen AI\n- Huawei\n- meraGPT\n- Opendatalab\n**门面换代（5）**\n- 蚂蚁百灵：Ling 3.1 Flash 1019 → Ling 3.2 Flash\n- Deep Reinforce：Ornith 1.5 35B A3B → Ornith 1.5 122B\n- OpenAI：GPT-6 Astra → GPT-6 Cyber\n- Pareto by Unbiased：Pareto → Pareto 26.10\n- Swiss AI：Apertus 70B → Apertus v1.5 8B"
+ },
+ {
   "newModels": [],
   "retired": [
    {
