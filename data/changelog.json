@@ -1,5 +1,50 @@
 [
  {
+  "newModels": [
+   {
+    "id": "alibaba/qwen4-max",
+    "name": "Qwen4 Max",
+    "slug": "alibaba-qwen4-max",
+    "vendorZh": "阿里通义"
+   },
+   {
+    "id": "tencent/hy4-flash",
+    "name": "Hy4 flash",
+    "slug": "tencent-hy4-flash",
+    "vendorZh": "腾讯混元"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "alibaba",
+    "vendorZh": "阿里通义",
+    "before": "Qwen 3.8 Max Prime",
+    "after": "Qwen4 Max",
+    "slug": "alibaba-qwen4-max"
+   },
+   {
+    "vendorId": "google",
+    "vendorZh": "谷歌",
+    "before": "Gemini 4 Hydrogen",
+    "after": "Gemini 4 Carbon",
+    "slug": "google-gemini-4-carbon"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Gemini 4 Hydrogen",
+    "after": "Hy4 flash",
+    "slug": "tencent-hy4-flash"
+   }
+  ],
+  "date": "2026-11-16T08:34:38.687Z",
+  "summary": "**新模型（2）**\n- Qwen4 Max · 阿里通义\n- Hy4 flash · 腾讯混元\n**门面换代（2）**\n- 阿里通义：Qwen 3.8 Max Prime → Qwen4 Max\n- 谷歌：Gemini 4 Hydrogen → Gemini 4 Carbon\n**冠军易主（1）**\n- 最新发布：Gemini 4 Hydrogen → Hy4 flash"
+ },
+ {
   "newModels": [],
   "retired": [
    {
