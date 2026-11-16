@@ -2,6 +2,27 @@
  {
   "newModels": [
    {
+    "id": "particle-ai/particle-1",
+    "name": "Particle-1",
+    "slug": "particle-ai-particle-1",
+    "vendorZh": "Particle AI"
+   }
+  ],
+  "retired": [],
+  "newVendors": [
+   {
+    "id": "particle-ai",
+    "nameZh": "Particle AI"
+   }
+  ],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-16T23:02:05.834Z",
+  "summary": "**新模型（1）**\n- Particle-1 · Particle AI\n**新厂商（1）**\n- Particle AI"
+ },
+ {
+  "newModels": [
+   {
     "id": "alibaba/qwen4-max",
     "name": "Qwen4 Max",
     "slug": "alibaba-qwen4-max",
