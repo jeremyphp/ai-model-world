@@ -2,6 +2,70 @@
  {
   "newModels": [
    {
+    "id": "openai/gpt-6.2-astra",
+    "name": "GPT-6.2 Astra",
+    "slug": "openai-gpt-6-2-astra",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "openai/gpt-6.2-astra-pro",
+    "name": "GPT 6.2 Astra PRO",
+    "slug": "openai-gpt-6-2-astra-pro",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "openai/gpt-6.2-sol",
+    "name": "GPT-6.2 Sol",
+    "slug": "openai-gpt-6-2-sol",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "openai/gpt-6.2-sol-pro",
+    "name": "GPT 6.2 SOL PRO",
+    "slug": "openai-gpt-6-2-sol-pro",
+    "vendorZh": "OpenAI"
+   }
+  ],
+  "retired": [
+   {
+    "id": "alibaba/qwen-3-235b",
+    "name": "Qwen 3 235B",
+    "slug": "alibaba-qwen-3-235b",
+    "vendorZh": "阿里通义"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "openai",
+    "vendorZh": "OpenAI",
+    "before": "GPT-6 Cyber",
+    "after": "GPT-6.2 Astra",
+    "slug": "openai-gpt-6-2-astra"
+   }
+  ],
+  "champions": [
+   {
+    "key": "smart",
+    "label": "最聪明",
+    "before": "Claude Fable 5.2",
+    "after": "GPT-6.2 Astra",
+    "slug": "openai-gpt-6-2-astra"
+   },
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Hy4 flash",
+    "after": "GPT-6.2 Astra",
+    "slug": "openai-gpt-6-2-astra"
+   }
+  ],
+  "date": "2026-11-17T21:54:54.183Z",
+  "summary": "**新模型（4）**\n- GPT-6.2 Astra · OpenAI\n- GPT 6.2 Astra PRO · OpenAI\n- GPT-6.2 Sol · OpenAI\n- GPT 6.2 SOL PRO · OpenAI\n**退役（1）**\n- Qwen 3 235B · 阿里通义\n**门面换代（1）**\n- OpenAI：GPT-6 Cyber → GPT-6.2 Astra\n**冠军易主（2）**\n- 最聪明：Claude Fable 5.2 → GPT-6.2 Astra\n- 最新发布：Hy4 flash → GPT-6.2 Astra"
+ },
+ {
+  "newModels": [
+   {
     "id": "particle-ai/particle-1",
     "name": "Particle-1",
     "slug": "particle-ai-particle-1",
