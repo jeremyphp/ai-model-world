@@ -232,7 +232,8 @@ export async function fetchLiveBench(fetchedAt: string): Promise<LiveBenchResult
           score,
           release: p.release,
           upstreamModel: model,
-          sourceUrl: `https://livebench.ai/#/?release=${p.release}`,
+          // 榜单页走 hash 路由，打开的是这一期 v1 表，而不是首页上的 2.0。
+          sourceUrl: `https://livebench.ai/#/release/${p.release}`,
         });
         byModel.set(slug, list);
         counts[league] = (counts[league] ?? 0) + 1;

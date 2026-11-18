@@ -32,9 +32,18 @@ export const ENDPOINTS = {
   litellm:
     'https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json',
   huggingfaceModel: 'https://huggingface.co/api/models',
-  /** LiveBench 官方榜单。宽表 CSV + 分组定义 JSON，release 日期拼在文件名里。 */
-  liveBenchTable: (release: string) => `https://livebench.ai/table_${release}.csv`,
-  liveBenchCategories: (release: string) => `https://livebench.ai/categories_${release}.json`,
+  /**
+   * LiveBench v1 榜单。宽表 CSV + 分组定义 JSON，release 日期拼在文件名里。
+   *
+   * 2026-10 站点改版后，根路径变成 LiveBench 2.0 的单页应用，
+   * `https://livebench.ai/table_<date>.csv` 会 404。官方前端改从 `/v1/` 取同一批文件，
+   * 列名没变；`table_2026_06_25.csv` 比 github.io 仓库里 7 月的副本还多出一批型号。
+   *
+   * 2.0 在 `/data/<YYYYMMDD>/table.csv`，Coding 是单个 `coding` 列，
+   * 不是 `code_generation` + `code_completion` 的平均，不能并进现有赛制。
+   */
+  liveBenchTable: (release: string) => `https://livebench.ai/v1/table_${release}.csv`,
+  liveBenchCategories: (release: string) => `https://livebench.ai/v1/categories_${release}.json`,
   /** release 清单的权威出处是仓库里的 LIVE_BENCH_RELEASES 常量，抓不到时回落到内置清单。 */
   liveBenchReleasesSource:
     'https://raw.githubusercontent.com/LiveBench/LiveBench/main/livebench/common.py',
