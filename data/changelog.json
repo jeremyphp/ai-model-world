@@ -1,5 +1,37 @@
 [
  {
+  "newModels": [
+   {
+    "id": "google/gemini-4-neon",
+    "name": "Gemini 4 Neon",
+    "slug": "google-gemini-4-neon",
+    "vendorZh": "谷歌"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "google",
+    "vendorZh": "谷歌",
+    "before": "Gemini 4 Carbon",
+    "after": "Gemini 4 Neon",
+    "slug": "google-gemini-4-neon"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "GPT-6.2 Astra",
+    "after": "Gemini 4 Neon",
+    "slug": "google-gemini-4-neon"
+   }
+  ],
+  "date": "2026-11-18T21:36:05.673Z",
+  "summary": "**新模型（1）**\n- Gemini 4 Neon · 谷歌\n**门面换代（1）**\n- 谷歌：Gemini 4 Carbon → Gemini 4 Neon\n**冠军易主（1）**\n- 最新发布：GPT-6.2 Astra → Gemini 4 Neon"
+ },
+ {
   "newModels": [],
   "retired": [
    {
