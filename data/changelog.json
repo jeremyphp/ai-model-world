@@ -1,5 +1,21 @@
 [
  {
+  "newModels": [],
+  "retired": [
+   {
+    "id": "minimax/minimax-m2.1-lightning",
+    "name": "Minimax M2.1 Lightning",
+    "slug": "minimax-minimax-m2-1-lightning",
+    "vendorZh": "MiniMax"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-18T09:06:26.129Z",
+  "summary": "**退役（1）**\n- Minimax M2.1 Lightning · MiniMax"
+ },
+ {
   "newModels": [
    {
     "id": "openai/gpt-6.2-astra",
