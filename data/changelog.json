@@ -2,6 +2,36 @@
  {
   "newModels": [
    {
+    "id": "microsoft/mai-code-2",
+    "name": "MAI Code 2",
+    "slug": "microsoft-mai-code-2",
+    "vendorZh": "微软"
+   },
+   {
+    "id": "microsoft/mai-code-2-flash",
+    "name": "MAI Code 2 Flash",
+    "slug": "microsoft-mai-code-2-flash",
+    "vendorZh": "微软"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "microsoft",
+    "vendorZh": "微软",
+    "before": "MAI-Code-1.1-Flash",
+    "after": "MAI Code 2",
+    "slug": "microsoft-mai-code-2"
+   }
+  ],
+  "champions": [],
+  "date": "2026-11-19T09:30:04.067Z",
+  "summary": "**新模型（2）**\n- MAI Code 2 · 微软\n- MAI Code 2 Flash · 微软\n**门面换代（1）**\n- 微软：MAI-Code-1.1-Flash → MAI Code 2"
+ },
+ {
+  "newModels": [
+   {
     "id": "google/gemini-4-neon",
     "name": "Gemini 4 Neon",
     "slug": "google-gemini-4-neon",
