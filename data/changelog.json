@@ -1,5 +1,22 @@
 [
  {
+  "newModels": [],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "code",
+    "label": "最会编程",
+    "before": "Claude Opus 5.5",
+    "after": "Claude Fable 5.1",
+    "slug": "anthropic-claude-fable-5-1"
+   }
+  ],
+  "date": "2026-11-20T09:10:36.675Z",
+  "summary": "**冠军易主（1）**\n- 最会编程：Claude Opus 5.5 → Claude Fable 5.1"
+ },
+ {
   "newModels": [
    {
     "id": "microsoft/mai-code-2",
