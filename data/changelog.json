@@ -6,6 +6,23 @@
   "flagships": [],
   "champions": [
    {
+    "key": "smart",
+    "label": "最聪明",
+    "before": "GPT-6.2 Astra",
+    "after": "Claude Fable 5.2",
+    "slug": "anthropic-claude-fable-5-2"
+   }
+  ],
+  "date": "2026-11-20T21:32:24.907Z",
+  "summary": "**冠军易主（1）**\n- 最聪明：GPT-6.2 Astra → Claude Fable 5.2"
+ },
+ {
+  "newModels": [],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
     "key": "code",
     "label": "最会编程",
     "before": "Claude Opus 5.5",
