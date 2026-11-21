@@ -1,5 +1,29 @@
 [
  {
+  "newModels": [
+   {
+    "id": "thinkingmachines/inkling-2-mini",
+    "name": "Inkling 2 Mini",
+    "slug": "thinkingmachines-inkling-2-mini",
+    "vendorZh": "Thinking Machines"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Gemini 4 Neon",
+    "after": "Inkling 2 Mini",
+    "slug": "thinkingmachines-inkling-2-mini"
+   }
+  ],
+  "date": "2026-11-21T08:45:18.760Z",
+  "summary": "**新模型（1）**\n- Inkling 2 Mini · Thinking Machines\n**冠军易主（1）**\n- 最新发布：Gemini 4 Neon → Inkling 2 Mini"
+ },
+ {
   "newModels": [],
   "retired": [],
   "newVendors": [],
