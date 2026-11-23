@@ -2,6 +2,61 @@
  {
   "newModels": [
    {
+    "id": "paperinstruments/ultramarine-1-flash",
+    "name": "Ultramarine 1 Flash",
+    "slug": "paperinstruments-ultramarine-1-flash",
+    "vendorZh": "Paperinstruments"
+   },
+   {
+    "id": "writer/palmyra-vision-7b",
+    "name": "Palmyra Vision 7B",
+    "slug": "writer-palmyra-vision-7b",
+    "vendorZh": "Writer"
+   },
+   {
+    "id": "xai/grok-4.20-multi-agent-0309",
+    "name": "Grok 4.20 Multi-Agent",
+    "slug": "xai-grok-4-20-multi-agent-0309",
+    "vendorZh": "xAI"
+   },
+   {
+    "id": "zhipuai/glm-5.4",
+    "name": "GLM-5.4",
+    "slug": "zhipuai-glm-5-4",
+    "vendorZh": "智谱"
+   }
+  ],
+  "retired": [],
+  "newVendors": [
+   {
+    "id": "paperinstruments",
+    "nameZh": "Paperinstruments"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "writer",
+    "vendorZh": "Writer",
+    "before": "Palmyra X5",
+    "after": "Palmyra Vision 7B",
+    "slug": "writer-palmyra-vision-7b"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Inkling 2 Mini",
+    "after": "GLM-5.4",
+    "slug": "zhipuai-glm-5-4"
+   }
+  ],
+  "date": "2026-11-23T09:45:42.983Z",
+  "summary": "**新模型（4）**\n- Ultramarine 1 Flash · Paperinstruments\n- Palmyra Vision 7B · Writer\n- Grok 4.20 Multi-Agent · xAI\n- GLM-5.4 · 智谱\n**新厂商（1）**\n- Paperinstruments\n**门面换代（1）**\n- Writer：Palmyra X5 → Palmyra Vision 7B\n**冠军易主（1）**\n- 最新发布：Inkling 2 Mini → GLM-5.4"
+ },
+ {
+  "newModels": [
+   {
     "id": "thinkingmachines/inkling-2-mini",
     "name": "Inkling 2 Mini",
     "slug": "thinkingmachines-inkling-2-mini",
