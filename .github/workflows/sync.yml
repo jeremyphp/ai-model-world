@@ -108,9 +108,14 @@ jobs:
       # 「更新引擎」的用户可订阅面：有值得一提的变化时，往「模型更新速报」issue 追加一条。
       # 关心的人 watch 这个仓库或这条 issue 就能第一时间收到（GitHub 会发通知/邮件），
       # 不依赖任何后端。连续变化不会刷出一堆 issue，永远只有一条。
+      #
+      # 发速报失败（仓库关闭 Issues、接口 5xx 等）不能把一次已经成功的同步标红。
+      # continue-on-error 只把本步的 conclusion 改成 success，job 状态保持原样，
+      # 所以不会让下面 `if: failure()` 的留痕步骤在同步其实成功时误跑。
       - name: 模型更新速报
         if: steps.changelog.outputs.changed == 'true'
-        uses: actions/github-script@v7
+        continue-on-error: true
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
@@ -159,9 +164,13 @@ jobs:
       # 「零维护」承诺失效时必须留下一条看得见的痕迹。
       # 找标题为「数据同步失败」且仍 open 的 issue：有就追加评论，没有就新建——
       # 连续失败不会刷出一堆 issue，修好之后手动关掉那一条即可。
+      #
+      # 开 issue 本身失败同样不把运行标红。本步仍只在 failure() 时执行：
+      # 同步步骤已经失败时 job 状态保持 failure，这次运行照样失败。
       - name: 同步失败时开 issue
         if: failure()
-        uses: actions/github-script@v7
+        continue-on-error: true
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
