@@ -3,6 +3,22 @@
   "newModels": [],
   "retired": [
    {
+    "id": "alibaba/qwen3-max-thinking",
+    "name": "Qwen3 MAX Thinking",
+    "slug": "alibaba-qwen3-max-thinking",
+    "vendorZh": "阿里通义"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-24T11:36:46.727Z",
+  "summary": "**退役（1）**\n- Qwen3 MAX Thinking · 阿里通义"
+ },
+ {
+  "newModels": [],
+  "retired": [
+   {
     "id": "openai/gpt-realtime-2.1",
     "name": "GPT-Realtime-2.1",
     "slug": "openai-gpt-realtime-2-1",
