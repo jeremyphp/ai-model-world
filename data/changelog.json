@@ -1,5 +1,33 @@
 [
  {
+  "newModels": [],
+  "retired": [
+   {
+    "id": "openai/gpt-realtime-2.1",
+    "name": "GPT-Realtime-2.1",
+    "slug": "openai-gpt-realtime-2-1",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "sarvam/sarvam-30b",
+    "name": "Sarvam 30B",
+    "slug": "sarvam-sarvam-30b",
+    "vendorZh": "Sarvam AI"
+   },
+   {
+    "id": "sarvam/sarvam-m",
+    "name": "Sarvam-M",
+    "slug": "sarvam-sarvam-m",
+    "vendorZh": "Sarvam AI"
+   }
+  ],
+  "newVendors": [],
+  "flagships": [],
+  "champions": [],
+  "date": "2026-11-24T01:12:49.549Z",
+  "summary": "**退役（3）**\n- GPT-Realtime-2.1 · OpenAI\n- Sarvam 30B · Sarvam AI\n- Sarvam-M · Sarvam AI"
+ },
+ {
   "newModels": [
    {
     "id": "paperinstruments/ultramarine-1-flash",
