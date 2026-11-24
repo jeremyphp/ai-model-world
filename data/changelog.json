@@ -1,5 +1,87 @@
 [
  {
+  "newModels": [
+   {
+    "id": "elorian-labs/glimpse-1.0",
+    "name": "Glimpse 1.0",
+    "slug": "elorian-labs-glimpse-1-0",
+    "vendorZh": "Elorian Labs"
+   },
+   {
+    "id": "prism-ml/ternary-bonsai-27b",
+    "name": "Ternary Bonsai 27B",
+    "slug": "prism-ml-ternary-bonsai-27b",
+    "vendorZh": "Prism ML"
+   },
+   {
+    "id": "stepfun/step-1o-turbo-vision",
+    "name": "Step-1o Turbo Vision",
+    "slug": "stepfun-step-1o-turbo-vision",
+    "vendorZh": "阶跃星辰"
+   },
+   {
+    "id": "stepfun/stepaudio-2.5-chat",
+    "name": "StepAudio 2.5 Chat",
+    "slug": "stepfun-stepaudio-2-5-chat",
+    "vendorZh": "阶跃星辰"
+   },
+   {
+    "id": "xiaomi/mimo-v2.6-flash-mopd",
+    "name": "Mimo V2.6 Flash Mopd",
+    "slug": "xiaomi-mimo-v2-6-flash-mopd",
+    "vendorZh": "小米"
+   }
+  ],
+  "retired": [
+   {
+    "id": "xiaomi/mimo-v2-tts",
+    "name": "MiMo-V2-TTS",
+    "slug": "xiaomi-mimo-v2-tts",
+    "vendorZh": "小米"
+   },
+   {
+    "id": "xiaomi/mimo-v2.5-tts",
+    "name": "MiMo-V2.5-TTS",
+    "slug": "xiaomi-mimo-v2-5-tts",
+    "vendorZh": "小米"
+   },
+   {
+    "id": "xiaomi/mimo-v2.5-tts-voiceclone",
+    "name": "MiMo-V2.5-TTS-VoiceClone",
+    "slug": "xiaomi-mimo-v2-5-tts-voiceclone",
+    "vendorZh": "小米"
+   },
+   {
+    "id": "xiaomi/mimo-v2.5-tts-voicedesign",
+    "name": "MiMo-V2.5-TTS-VoiceDesign",
+    "slug": "xiaomi-mimo-v2-5-tts-voicedesign",
+    "vendorZh": "小米"
+   }
+  ],
+  "newVendors": [
+   {
+    "id": "elorian-labs",
+    "nameZh": "Elorian Labs"
+   },
+   {
+    "id": "prism-ml",
+    "nameZh": "Prism ML"
+   }
+  ],
+  "flagships": [],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "GLM-5.4",
+    "after": "Mimo V2.6 Flash Mopd",
+    "slug": "xiaomi-mimo-v2-6-flash-mopd"
+   }
+  ],
+  "date": "2026-11-24T23:16:31.818Z",
+  "summary": "**新模型（5）**\n- Glimpse 1.0 · Elorian Labs\n- Ternary Bonsai 27B · Prism ML\n- Step-1o Turbo Vision · 阶跃星辰\n- StepAudio 2.5 Chat · 阶跃星辰\n- Mimo V2.6 Flash Mopd · 小米\n**退役（4）**\n- MiMo-V2-TTS · 小米\n- MiMo-V2.5-TTS · 小米\n- MiMo-V2.5-TTS-VoiceClone · 小米\n- MiMo-V2.5-TTS-VoiceDesign · 小米\n**新厂商（2）**\n- Elorian Labs\n- Prism ML\n**冠军易主（1）**\n- 最新发布：GLM-5.4 → Mimo V2.6 Flash Mopd"
+ },
+ {
   "newModels": [],
   "retired": [
    {
