@@ -2,6 +2,44 @@
  {
   "newModels": [
    {
+    "id": "upstage/solar-mini-4-5",
+    "name": "Solar Mini 4 5",
+    "slug": "upstage-solar-mini-4-5",
+    "vendorZh": "Upstage"
+   },
+   {
+    "id": "upstage/solar-pro-4-contributor",
+    "name": "Solar PRO 4 Contributor",
+    "slug": "upstage-solar-pro-4-contributor",
+    "vendorZh": "Upstage"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "upstage",
+    "vendorZh": "Upstage",
+    "before": "Solar Pro 4",
+    "after": "Solar PRO 4 Contributor",
+    "slug": "upstage-solar-pro-4-contributor"
+   }
+  ],
+  "champions": [
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Mimo V2.6 Flash Mopd",
+    "after": "Solar Mini 4 5",
+    "slug": "upstage-solar-mini-4-5"
+   }
+  ],
+  "date": "2026-11-25T10:28:50.637Z",
+  "summary": "**新模型（2）**\n- Solar Mini 4 5 · Upstage\n- Solar PRO 4 Contributor · Upstage\n**门面换代（1）**\n- Upstage：Solar Pro 4 → Solar PRO 4 Contributor\n**冠军易主（1）**\n- 最新发布：Mimo V2.6 Flash Mopd → Solar Mini 4 5"
+ },
+ {
+  "newModels": [
+   {
     "id": "elorian-labs/glimpse-1.0",
     "name": "Glimpse 1.0",
     "slug": "elorian-labs-glimpse-1-0",
