@@ -2,6 +2,87 @@
  {
   "newModels": [
    {
+    "id": "openai/gpt-6-astra-healthcare",
+    "name": "GPT-6 Astra Healthcare",
+    "slug": "openai-gpt-6-astra-healthcare",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "openai/gpt-6.1-sol-healthcare",
+    "name": "GPT-6.1 Sol Healthcare",
+    "slug": "openai-gpt-6-1-sol-healthcare",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "openai/gpt-6.2-astra-healthcare",
+    "name": "GPT-6.2 Astra Healthcare",
+    "slug": "openai-gpt-6-2-astra-healthcare",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "openai/gpt-6.2-sol-healthcare",
+    "name": "GPT-6.2 Sol Healthcare",
+    "slug": "openai-gpt-6-2-sol-healthcare",
+    "vendorZh": "OpenAI"
+   },
+   {
+    "id": "pipecat-ai/phonellm-mini-alpha-2",
+    "name": "PhoneLLM Mini Alpha 2",
+    "slug": "pipecat-ai-phonellm-mini-alpha-2",
+    "vendorZh": "Pipecat AI"
+   },
+   {
+    "id": "zhipuai/glm-4-32b-0414-128k",
+    "name": "GLM-4-32B-0414-128K",
+    "slug": "zhipuai-glm-4-32b-0414-128k",
+    "vendorZh": "智谱"
+   }
+  ],
+  "retired": [],
+  "newVendors": [
+   {
+    "id": "pipecat-ai",
+    "nameZh": "Pipecat AI"
+   }
+  ],
+  "flagships": [
+   {
+    "vendorId": "zhipuai",
+    "vendorZh": "智谱",
+    "before": "GLM 5.3 Prime",
+    "after": "GLM-5.4",
+    "slug": "zhipuai-glm-5-4"
+   },
+   {
+    "vendorId": "openai",
+    "vendorZh": "OpenAI",
+    "before": "GPT-6.2 Astra",
+    "after": "GPT-6 Astra Healthcare",
+    "slug": "openai-gpt-6-astra-healthcare"
+   }
+  ],
+  "champions": [
+   {
+    "key": "cheap",
+    "label": "最便宜",
+    "before": "Llama-3.1-8B-Instruct",
+    "after": "Mistral Nemo",
+    "slug": "mistral-mistral-nemo"
+   },
+   {
+    "key": "newest",
+    "label": "最新发布",
+    "before": "Solar Mini 4 5",
+    "after": "GPT-6 Astra Healthcare",
+    "slug": "openai-gpt-6-astra-healthcare"
+   }
+  ],
+  "date": "2026-11-25T22:45:10.931Z",
+  "summary": "**新模型（6）**\n- GPT-6 Astra Healthcare · OpenAI\n- GPT-6.1 Sol Healthcare · OpenAI\n- GPT-6.2 Astra Healthcare · OpenAI\n- GPT-6.2 Sol Healthcare · OpenAI\n- PhoneLLM Mini Alpha 2 · Pipecat AI\n- GLM-4-32B-0414-128K · 智谱\n**新厂商（1）**\n- Pipecat AI\n**门面换代（2）**\n- 智谱：GLM 5.3 Prime → GLM-5.4\n- OpenAI：GPT-6.2 Astra → GPT-6 Astra Healthcare\n**冠军易主（2）**\n- 最便宜：Llama-3.1-8B-Instruct → Mistral Nemo\n- 最新发布：Solar Mini 4 5 → GPT-6 Astra Healthcare"
+ },
+ {
+  "newModels": [
+   {
     "id": "upstage/solar-mini-4-5",
     "name": "Solar Mini 4 5",
     "slug": "upstage-solar-mini-4-5",
