@@ -2,6 +2,30 @@
  {
   "newModels": [
    {
+    "id": "inclusionai/lingsante-3.1-air-vl",
+    "name": "LingSante 3.1 Air VL",
+    "slug": "inclusionai-lingsante-3-1-air-vl",
+    "vendorZh": "蚂蚁百灵"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "inclusionai",
+    "vendorZh": "蚂蚁百灵",
+    "before": "Ling 3.2 Flash",
+    "after": "LingSante 3.1 Air VL",
+    "slug": "inclusionai-lingsante-3-1-air-vl"
+   }
+  ],
+  "champions": [],
+  "date": "2026-11-26T22:35:24.005Z",
+  "summary": "**新模型（1）**\n- LingSante 3.1 Air VL · 蚂蚁百灵\n**门面换代（1）**\n- 蚂蚁百灵：Ling 3.2 Flash → LingSante 3.1 Air VL"
+ },
+ {
+  "newModels": [
+   {
     "id": "openai/gpt-6-astra-healthcare",
     "name": "GPT-6 Astra Healthcare",
     "slug": "openai-gpt-6-astra-healthcare",
