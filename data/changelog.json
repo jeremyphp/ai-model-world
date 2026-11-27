@@ -2,6 +2,37 @@
  {
   "newModels": [
    {
+    "id": "mindlab/macaron-v1.1-venti",
+    "name": "Macaron V1.1 Venti",
+    "slug": "mindlab-macaron-v1-1-venti",
+    "vendorZh": "Mindlab"
+   }
+  ],
+  "retired": [],
+  "newVendors": [],
+  "flagships": [
+   {
+    "vendorId": "mindlab",
+    "vendorZh": "Mindlab",
+    "before": "Macaron V1 Venti",
+    "after": "Macaron V1.1 Venti",
+    "slug": "mindlab-macaron-v1-1-venti"
+   },
+   {
+    "vendorId": "thinkingmachines",
+    "vendorZh": "Thinking Machines",
+    "before": "Inkling Small",
+    "after": "Inkling 2 Mini",
+    "slug": "thinkingmachines-inkling-2-mini"
+   }
+  ],
+  "champions": [],
+  "date": "2026-11-27T22:20:13.034Z",
+  "summary": "**新模型（1）**\n- Macaron V1.1 Venti · Mindlab\n**门面换代（2）**\n- Mindlab：Macaron V1 Venti → Macaron V1.1 Venti\n- Thinking Machines：Inkling Small → Inkling 2 Mini"
+ },
+ {
+  "newModels": [
+   {
     "id": "inclusionai/lingsante-3.1-air-vl",
     "name": "LingSante 3.1 Air VL",
     "slug": "inclusionai-lingsante-3-1-air-vl",
